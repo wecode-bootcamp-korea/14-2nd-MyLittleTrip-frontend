@@ -1,8 +1,13 @@
 import React, { Component } from "react";
+import Navtrans from "../../components/Navtrans/Navtrans";
 
 class Main extends Component {
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <Navtrans />
+      </div>
+    );
   }
 }
 
