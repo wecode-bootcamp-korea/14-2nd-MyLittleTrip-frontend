@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import Navtrans from "../../Components/Navtrans/Navtrans";
+import Navtrans from "../../components/Navtrans/Navtrans";
 
 class Main extends Component {
   render() {
     return (
       <div>
-        <Navtrans />
+        <Navtrans theme="normal" />
       </div>
     );
   }
