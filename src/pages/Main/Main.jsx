@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Navtrans from "../../components/Navtrans/Navtrans";
+import Navtrans from "../../Components/Navtrans/Navtrans";
 
 class Main extends Component {
   render() {
