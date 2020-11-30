@@ -1,0 +1,13 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+$primaryColor: #53abf2;
+$lightGrayBorder: #e0e2e4;
+$blackFontColor: #353b40;
+$grayFontColor: #b4bcc3;
+$navyFontColor: #216aad;
+$clickedHoverColor: #2d97ed;
+$unclickedHoverColor: #73b5f3;
