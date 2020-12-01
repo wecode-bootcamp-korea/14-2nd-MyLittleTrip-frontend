@@ -1,40 +1,26 @@
 import React from "react";
-import styled from "styled-components";
-import Navtrans from "../../Components/Navtrans/Navtrans";
-import LoadingScreen from "../../Components/LoadingScreen/LoadingScreen";
+import MainHeader from "./Components/MainHeader/MainHeader";
+import RecentSearch from "./Components/RecentSearch/RecentSearch";
+import EventBanner from "./Components/EventBanner/EventBanner";
+import SpecialPrice from "./Components/SpecialPrice/SpecialPrice";
+import { useAxios } from "../../Components/Hooks/useAxios";
 
 const Main = (props) => {
+  const { response } = useAxios({
+    method: "get",
+    url: "/data/specialPriceData.json",
+  });
+
   return (
     <>
-      <MainHeader>
-        <Navtrans themeColor="" />
-        <div className="imageContainer">
-          <img
-            className="bannerImage"
-            src="https://i.ibb.co/CH9f0kZ/suu-terr-Dan-Q2b13x-Ps-unsplash.jpg"
-            alt="banner"
-          />
-        </div>
-      </MainHeader>
-      <div>다음</div>
+      <MainHeader />
+      <RecentSearch />
+      <EventBanner />
+      {response && <SpecialPrice title="국내 특가 항공권" cardData={response.domestic.slice(0, 8)} />}
+      {response && <SpecialPrice title="해외 특가 항공권" cardData={response.foreign.slice(0, 8)} />}
+      {/* <Footer /> footer가 들어올 자리 */}
     </>
   );
 };
-
-const MainHeader = styled.div`
-  position: relative;
-  height: 348px;
-
-  .imageContainer {
-    position: absolute;
-    top: 0;
-    height: 348px;
-    z-index: -1;
-    overflow: hidden;
-    .bannerImage {
-      width: 100%;
-    }
-  }
-`;
 
 export default Main;

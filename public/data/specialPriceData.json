@@ -1,0 +1,150 @@
+{
+  "domestic": [
+    {
+      "id": 1,
+      "imageUrl": "https://images.unsplash.com/photo-1579169326371-ccb4e63f7889?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+      "departAirport": "서울",
+      "arriveAirport": "제주",
+      "departDate": "2020-12-01",
+      "arriveDate": "2020-12-03",
+      "price": 17900
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://images.unsplash.com/photo-1603184120987-e6aae27330d9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "departAirport": "서울",
+      "arriveAirport": "부산",
+      "departDate": "2020-12-03",
+      "arriveDate": "2020-12-04",
+      "price": 22900
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://images.unsplash.com/photo-1519808511465-c935152e1cf1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "departAirport": "김포",
+      "arriveAirport": "제주",
+      "departDate": "2020-12-05",
+      "arriveDate": "2020-12-06",
+      "price": 17900
+    },
+    {
+      "id": 4,
+      "imageUrl": "https://images.unsplash.com/photo-1597230842173-5588b5da029a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1349&q=80",
+      "departAirport": "제주",
+      "arriveAirport": "부산",
+      "departDate": "2020-12-07",
+      "arriveDate": "2020-12-08",
+      "price": 15900
+    },
+    {
+      "id": 5,
+      "imageUrl": "https://images.unsplash.com/photo-1534274867514-d5b47ef89ed7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1270&q=80",
+      "departAirport": "제주",
+      "arriveAirport": "서울",
+      "departDate": "2020-12-09",
+      "arriveDate": "2020-12-10",
+      "price": 17900
+    },
+    {
+      "id": 6,
+      "imageUrl": "https://images.unsplash.com/photo-1595737335975-2160c924caf2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "departAirport": "청주",
+      "arriveAirport": "제주",
+      "departDate": "2020-12-01",
+      "arriveDate": "2020-12-03",
+      "price": 15900
+    },
+    {
+      "id": 7,
+      "imageUrl": "https://images.unsplash.com/photo-1597489420377-e23d4a080346?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "departAirport": "서울",
+      "arriveAirport": "광주",
+      "departDate": "2020-12-01",
+      "arriveDate": "2020-12-03",
+      "price": 39000
+    },
+    {
+      "id": 8,
+      "imageUrl": "https://images.unsplash.com/photo-1546539995-72f5ab4cd13d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+      "departAirport": "서울",
+      "arriveAirport": "여수",
+      "departDate": "2020-12-01",
+      "arriveDate": "2020-12-03",
+      "price": 30000
+    }
+  ],
+  "foreign": [
+    {
+      "id": 1,
+      "imageUrl": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+      "departAirport": "서울",
+      "arriveAirport": "도쿄",
+      "departDate": "2020-01-01",
+      "arriveDate": "2020-12-31",
+      "price": 68000
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://images.unsplash.com/photo-1509021267491-23cf1db34c20?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
+      "departAirport": "서울",
+      "arriveAirport": "청도",
+      "departDate": "2020-01-01",
+      "arriveDate": "2020-12-31",
+      "price": 176500
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://images.unsplash.com/photo-1505761671935-60b3a7427bad?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "departAirport": "서울",
+      "arriveAirport": "런던",
+      "departDate": "2020-01-01",
+      "arriveDate": "2020-12-31",
+      "price": 355600
+    },
+    {
+      "id": 4,
+      "imageUrl": "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+      "departAirport": "서울",
+      "arriveAirport": "파리",
+      "departDate": "2020-01-01",
+      "arriveDate": "2020-12-31",
+      "price": 386300
+    },
+    {
+      "id": 5,
+      "imageUrl": "https://images.unsplash.com/photo-1530959106156-50f49c30932d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+      "departAirport": "서울",
+      "arriveAirport": "뉴욕",
+      "departDate": "2020-01-01",
+      "arriveDate": "2020-12-31",
+      "price": 649900
+    },
+    {
+      "id": 6,
+      "imageUrl": "https://images.unsplash.com/photo-1460881680858-30d872d5b530?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1351&q=80",
+      "departAirport": "서울",
+      "arriveAirport": "로스엔젤레스",
+      "departDate": "2020-01-01",
+      "arriveDate": "2020-12-31",
+      "price": 708800
+    },
+    {
+      "id": 7,
+      "imageUrl": "https://images.unsplash.com/photo-1546244964-65f4072c0915?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80",
+      "departAirport": "서울",
+      "arriveAirport": "프랑크푸르트",
+      "departDate": "2020-01-01",
+      "arriveDate": "2020-12-31",
+      "price": 782600
+    },
+    {
+      "id": 8,
+      "imageUrl": "https://images.unsplash.com/photo-1535392432937-a27c36ec07b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+      "departAirport": "서울",
+      "arriveAirport": "하와이",
+      "departDate": "2020-01-01",
+      "arriveDate": "2020-12-31",
+      "price": 682100
+    }
+  ]
+}

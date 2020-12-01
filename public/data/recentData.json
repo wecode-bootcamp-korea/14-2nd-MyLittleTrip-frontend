@@ -1,0 +1,48 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "departAirport": "서울",
+      "departCode": "SEL",
+      "arriveAirport": "방콕",
+      "arriveCode": "BKK",
+      "departDate": "2020-12-10",
+      "arriveDate": "2020-12-12",
+      "headCount": 1,
+      "seatType": "일반석"
+    },
+    {
+      "id": 2,
+      "departAirport": "김포",
+      "departCode": "GMP",
+      "arriveAirport": "부산",
+      "arriveCode": "PUS",
+      "departDate": "2020-12-3",
+      "arriveDate": "2020-12-5",
+      "headCount": 3,
+      "seatType": "특별석"
+    },
+    {
+      "id": 3,
+      "departAirport": "김포",
+      "departCode": "GMP",
+      "arriveAirport": "부산",
+      "arriveCode": "PUS",
+      "departDate": "2020-12-10",
+      "arriveDate": "2020-12-12",
+      "headCount": 2,
+      "seatType": "일등석"
+    },
+    {
+      "id": 4,
+      "departAirport": "서울",
+      "departCode": "SEL",
+      "arriveAirport": "방콕",
+      "arriveCode": "BKK",
+      "departDate": "2020-12-10",
+      "arriveDate": "2020-12-14",
+      "headCount": 1,
+      "seatType": "일반석"
+    }
+  ]
+}
