@@ -1,3 +1,18 @@
+export const PROFILE_MENUS = [
+  {
+    id: 1,
+    name: "위시리스트"
+  },
+  {
+    id: 2,
+    name: "예약내역"
+  },
+  {
+    id: 3,
+    name: "메시지"
+  },
+]
+
 export const CATEGORIES = [
   {
     id: 1,
