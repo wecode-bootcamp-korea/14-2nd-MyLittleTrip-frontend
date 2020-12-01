@@ -1,5 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import reset from 'styled-reset';
+
 const GlobalStyles = createGlobalStyle`
   ${reset}
   *{
@@ -10,14 +11,14 @@ const GlobalStyles = createGlobalStyle`
     border-style: none;
     cursor: pointer;
   }
+
+  a{
+    text-decoration: none;
+  }
   
   button{
     border-style: none;
     cursor: pointer;
-  }
-  
-  a{
-    text-decoration: none;
   }
 `;
 export default GlobalStyles; 
