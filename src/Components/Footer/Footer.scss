@@ -1,0 +1,199 @@
+@import '../../styles/common.scss';
+
+.Footer {
+  height: 430px;
+  border-top: 1px $lightGrayBorder;
+
+  .footerContainer {
+    margin: 0 190px 0 190px;
+
+    .footerModule {
+      padding: 40px 0 40px 0;
+
+      .footerModuleTop {
+        display: flex;
+        height: 192px;
+
+        .moduleLeft {
+          height: 160px;
+          width: 498px;
+          padding-bottom: 32px;
+
+          .costumerService {
+            margin-top: 2px;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: -0.2px;
+            text-align: left;
+            color: $fontGreyColor;
+          }
+
+          .serviceNumber {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            text-align: left;
+            color: $fontGreyColor;
+          }
+
+          .serviceTime {
+            margin-top: 2px;
+            font-size: 12px;
+            letter-spacing: -0.2px;
+            text-align: left;
+            color: #848c94;
+
+            span {
+              color: #495056;
+            }
+          }
+          .chatService {
+            margin-top: 16px;
+            padding: 9px 8px 9px 8px;
+            font-size: 14px;
+            font-weight: 700;
+            text-align: center;
+            background-color: white;
+            cursor: pointer;
+          }
+        }
+        .moduleRight {
+          display: flex;
+          height: 160px;
+          width: 530px;
+          font-size: 15px;
+          font-weight: 700;
+          letter-spacing: -0.2px;
+          text-align: left;
+          color: $fontGreyColor;
+
+          .compIntroduceContainer {
+            height: 155px;
+            width: 176px;
+
+            .compIntroduceList {
+              .compIntroduce {
+                line-height: 24px;
+              }
+
+              .compIntro {
+                margin-top: 5px;
+                line-height: 24px;
+              }
+
+              .compHire {
+                line-height: 24px;
+              }
+            }
+          }
+
+          .compPartnerContainer {
+            height: 155px;
+            width: 176px;
+
+            .compPartner {
+              line-height: 24px;
+            }
+
+            .compPartnerList {
+              .addPartner {
+                margin-top: 5px;
+                line-height: 24px;
+              }
+
+              .affiliateProgram {
+                line-height: 24px;
+              }
+
+              .realGuide {
+                line-height: 24px;
+              }
+
+              .guideBlog {
+                line-height: 24px;
+              }
+            }
+          }
+
+          .compSupportContainer {
+            height: 155px;
+            width: 176px;
+
+            .compSupport {
+              line-height: 24px;
+            }
+
+            .compSupportList {
+              .commonQuestion {
+                margin-top: 5px;
+                line-height: 24px;
+              }
+
+              .lowestPrice {
+                line-height: 24px;
+              }
+            }
+          }
+        }
+      }
+      .footerModuleBottom {
+        height: 140px;
+        width: 1060px;
+        padding-top: 16px;
+
+        .modulePolicy {
+          display: flex;
+          height: 44px;
+          width: 530px;
+
+          .policyContract {
+            display: flex;
+            height: 44px;
+            width: 63px;
+            margin-right: 20px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: -0.2px;
+            line-height: 32px;
+            text-align: center;
+          }
+
+          .policyPrivate {
+            display: flex;
+            height: 44px;
+            width: 110px;
+            margin-right: 20px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: -0.2px;
+            line-height: 32px;
+            text-align: center;
+          }
+
+          .policyRefund {
+            display: flex;
+            height: 44px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: -0.2px;
+            line-height: 32px;
+            text-align: center;
+          }
+        }
+        .socialNetwork {
+          height: 44px;
+          width: 530px;
+          border: solid lightskyblue;
+        }
+        .compAddress {
+          height: 80px;
+          width: 909px;
+          margin-top: 16px;
+          font-size: 12px;
+          color: $fontGreyColor;
+        }
+      }
+    }
+  }
+}
