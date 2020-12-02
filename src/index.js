@@ -6,7 +6,9 @@ import {createStore} from "redux";
 import rootReducer from "./store/reducers";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./styles/reset.scss";
+import './styles/common.scss';
+import './styles/reset.scss';
+
 
 const store = createStore(rootReducer);
 
