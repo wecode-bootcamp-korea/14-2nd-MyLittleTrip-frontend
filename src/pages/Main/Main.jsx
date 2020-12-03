@@ -14,7 +14,6 @@ const Main = (props) => {
             alt="banner"
           />
         </div>
-        <FlightSelector>여기</FlightSelector>
       </MainHeader>
       <div>다음</div>
     </>
@@ -35,11 +34,6 @@ const MainHeader = styled.div`
       width: 100%;
     }
   }
-`;
-
-const FlightSelector = styled.section`
-  width: 1000px;
-  padding: 40px 0;
 `;
 
 export default Main;
