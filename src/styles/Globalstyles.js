@@ -6,7 +6,6 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     outline: none;
   }
-
   input{
     border-style: none;
     cursor: pointer;
@@ -16,7 +15,7 @@ const GlobalStyles = createGlobalStyle`
     border-style: none;
     cursor: pointer;
   }
-
+  
   a{
     text-decoration: none;
   }

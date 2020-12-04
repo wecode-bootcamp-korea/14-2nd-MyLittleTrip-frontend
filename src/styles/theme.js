@@ -11,7 +11,15 @@ export const theme = {
   lightBlack: '#353b40',
   black: '#222222',
   transparentWhite : "rgba(255,255,255,0.8)",
+  littletransparentWhite : 'rgba(255,255,255,0.9)'
 };
+
+export const flexSet = (justifyContent, alignItems, flexDirection) => css`
+  display: flex;
+  justify-content: ${justifyContent};
+  align-items: ${alignItems};
+  flex-direction: ${flexDirection};
+`;
 
 export const flexCenter = css`
   display: flex;

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Navtrans from "../../Components/Navtrans/Navtrans";
+import LoadingScreen from "../../Components/LoadingScreen/LoadingScreen";
 
 const Main = (props) => {
   return (

@@ -23,7 +23,7 @@ const Navtrans = ({ themeColor }) => {
   }, []);
 
   return (
-    <NavContainer>
+    <NavContainer themeColor={themeColor}>
       <Navbar themeColor={themeColor}>
         <div className="navLeft">
           <Link to="/">
@@ -98,7 +98,8 @@ const LogoImage = styled.img.attrs((props) => ({
 
 const NavContainer = styled.div`
   z-index: 100;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid
+    ${(props) => (props.themeColor === "normal" ? "rgba(0,0,0,0.05)" : "rgba(255, 255, 255, 0.2)")};
 `;
 
 const Navbar = styled.nav`
@@ -137,7 +138,7 @@ const Navbar = styled.nav`
         transition: ease-in-out 0.5s;
 
         &::placeholder {
-          color: ${(props) => (props.themeColor === "normal" ? "rgba(0,0,0,0.5)" : theme.transparentWhite)};
+          color: ${({ themeColor, theme }) => (themeColor === "normal" ? "rgba(0,0,0,0.5)" : theme.transparentWhite)};
         }
 
         &:hover {
@@ -163,7 +164,7 @@ const Navbar = styled.nav`
     p {
       margin-right: 20px;
       font-size: 15px;
-      color: ${(props) => (props.themeColor === "normal" ? "#666d75" : theme.transparentWhite)};
+      color: ${({ themeColor, theme }) => (themeColor === "normal" ? "#666d75" : theme.transparentWhite)};
       cursor: pointer;
     }
 
@@ -175,20 +176,16 @@ const Navbar = styled.nav`
 
 const NavBottom = styled.nav`
   display: flex;
-  justify-content: center;
-  height: 35px;
-  margin: 10px 300px 0 0;
-
-  @media screen and (max-width: 1000px) {
-    margin: 10px 0 0 0;
-  }
+  max-width: 1060px;
+  height: 50px;
+  margin: 0 auto;
 
   .categoryItem {
     padding: 0 10px;
 
     p {
-      padding: 0 7px 15px 7px;
-      color: ${(props) => (props.themeColor === "normal" ? theme.darkGray : "rgba(255,255,255,0.7)")};
+      padding: 15px 7px;
+      color: ${({ themeColor, theme }) => (themeColor === "normal" ? theme.darkGray : "rgba(255,255,255,0.7)")};
       font-size: 16px;
       font-weight: 500;
       cursor: pointer;
@@ -197,7 +194,7 @@ const NavBottom = styled.nav`
 
       &:hover {
         border-bottom: 4px solid
-          ${(props) => (props.themeColor === "normal" ? theme.lightBlue : "rgba(255,255,255,0.5)")};
+          ${({ themeColor, theme }) => (themeColor === "normal" ? theme.lightBlue : "rgba(255,255,255,0.5)")};
         transition: ease-in-out 0.2s;
       }
 
@@ -215,10 +212,18 @@ const LoginProfileBar = styled.div`
   align-items: center;
 
   p {
-    margin-right: 20px;
+    padding: 7px 10px;
+    margin-right: 10px;
     font-size: 15px;
-    color: ${(props) => (props.themeColor === "normal" ? "#666d75" : theme.transparentWhite)};
+    color: ${({ themeColor, theme }) => (themeColor === "normal" ? "#666d75" : theme.transparentWhite)};
+    transition: ease-in-out 0.2s;
     cursor: pointer;
+
+    &:hover {
+      background-color: ${(props) => (props.themeColor === "normal" ? "rgba(0,0,0,0.05)" : "rgba(255,255,255,0.2)")};
+      border-radius: 4px;
+      transition: ease-in-out 0.2s;
+    }
   }
 
   .userIcon {
@@ -231,20 +236,35 @@ const LogoutProfileBar = styled.div`
   align-items: center;
 
   p {
-    margin-left: 30px;
-    color: ${(props) => (props.themeColor === "normal" ? "#666d75" : theme.transparentWhite)};
+    margin-left: 10px;
+    padding: 7px 10px;
+    color: ${({ themeColor, theme }) => (themeColor === "normal" ? "#666d75" : theme.transparentWhite)};
     font-size: 15px;
+    border-radius: 3px;
+    transition: ease-in-out 0.2s;
     cursor: pointer;
 
+    &:hover {
+      background-color: ${(props) => (props.themeColor === "normal" ? "rgba(0,0,0,0.05)" : "rgba(255,255,255,0.2)")};
+      transition: ease-in-out 0.2s;
+    }
+
     a {
-      color: ${(props) => (props.themeColor === "normal" ? "#666d75" : theme.transparentWhite)};
+      color: ${({ themeColor, theme }) => (themeColor === "normal" ? "#666d75" : theme.transparentWhite)};
     }
 
     &.signUpButton {
       padding: 9px 30px 7px 30px;
-      border: 1px solid ${(props) => (props.themeColor === "normal" ? theme.deepBlue : theme.transparentWhite)};
+      border: 1px solid
+        ${({ themeColor, theme }) => (themeColor === "normal" ? theme.deepBlue : theme.transparentWhite)};
+
+      &:hover {
+        background-color: ${(props) =>
+          props.themeColor === "normal" ? "rgba(79, 171, 242, 0.1)" : "rgba(255,255,255,0.2)"};
+        transition: ease-in-out 0.2s;
+      }
       a {
-        color: ${(props) => (props.themeColor === "normal" ? theme.deepBlue : theme.transparentWhite)};
+        color: ${({ themeColor, theme }) => (themeColor === "normal" ? theme.deepBlue : theme.transparentWhite)};
       }
     }
   }
