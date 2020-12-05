@@ -1,0 +1,544 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "airplane": {
+        "id": 27703,
+        "from_region": {
+          "name": "김포",
+          "region_code": "GMP"
+        },
+        "to_region": {
+          "name": "광주",
+          "region_code": "PSU"
+        },
+        "airline": {
+          "name": "승윤 항공",
+          "image_url": "https://i.ibb.co/NYynBtD/air4.png"
+        },
+        "from_date": "2020-12-26T10:13:33Z",
+        "to_date": "2020-12-26T22:14:33Z",
+        "airplane_numbers": "3798"
+      },
+      "seat_type": {
+        "name": "일등석"
+      },
+      "price": "3100.00",
+      "remaining_seat": 10,
+      "total_seats": 10
+    },
+    {
+      "id": 2,
+      "airplane": {
+        "id": 19180,
+        "from_region": {
+          "name": "청주여수",
+          "region_code": "CJJ"
+        },
+        "to_region": {
+          "name": "광주",
+          "region_code": "PSU"
+        },
+        "airline": {
+          "name": "병준 항공",
+          "image_url": "https://i.ibb.co/pfHVR4v/air1.png"
+        },
+        "from_date": "2020-12-24T12:47:33Z",
+        "to_date": "2020-12-24T21:43:33Z",
+        "airplane_numbers": "6448"
+      },
+      "seat_type": {
+        "name": "일등석"
+      },
+      "price": "9500.00",
+      "remaining_seat": 10,
+      "total_seats": 10
+    },
+    {
+      "id": 3,
+      "airplane": {
+        "id": 18756,
+        "from_region": {
+          "name": "양양",
+          "region_code": "TAE"
+        },
+        "to_region": {
+          "name": "대구",
+          "region_code": "KWJ"
+        },
+        "airline": {
+          "name": "규석 항공",
+          "image_url": "https://i.ibb.co/Zz5W94B/air5.png"
+        },
+        "from_date": "2020-12-24T10:46:33Z",
+        "to_date": "2020-12-24T22:45:33Z",
+        "airplane_numbers": "2373"
+      },
+      "seat_type": {
+        "name": "일등석"
+      },
+      "price": "5700.00",
+      "remaining_seat": 10,
+      "total_seats": 10
+    },
+    {
+      "id": 4,
+      "airplane": {
+        "id": 23790,
+        "from_region": {
+          "name": "청주여수",
+          "region_code": "CJJ"
+        },
+        "to_region": {
+          "name": "대구",
+          "region_code": "KWJ"
+        },
+        "airline": {
+          "name": "리틀 항공",
+          "image_url": "https://i.ibb.co/cLRpxwR/airSY.png"
+        },
+        "from_date": "2020-12-26T11:15:33Z",
+        "to_date": "2020-12-26T21:34:33Z",
+        "airplane_numbers": "4654"
+      },
+      "seat_type": {
+        "name": "일등석"
+      },
+      "price": "800.00",
+      "remaining_seat": 10,
+      "total_seats": 10
+    },
+    {
+      "id": 5,
+      "airplane": {
+        "id": 1319,
+        "from_region": {
+          "name": "김포",
+          "region_code": "GMP"
+        },
+        "to_region": {
+          "name": "부산",
+          "region_code": "PUS"
+        },
+        "airline": {
+          "name": "에어 조던 항공",
+          "image_url": "https://i.ibb.co/42vfMkb/airo9.png"
+        },
+        "from_date": "2020-12-24T12:22:33Z",
+        "to_date": "2020-12-24T20:15:33Z",
+        "airplane_numbers": "5313"
+      },
+      "seat_type": {
+        "name": "일등석"
+      },
+      "price": "200.00",
+      "remaining_seat": 10,
+      "total_seats": 10
+    },
+    {
+      "id": 6,
+      "airplane": {
+        "id": 25716,
+        "from_region": {
+          "name": "광주",
+          "region_code": "PSU"
+        },
+        "to_region": {
+          "name": "부산",
+          "region_code": "PUS"
+        },
+        "airline": {
+          "name": "병준 항공",
+          "image_url": "https://i.ibb.co/pfHVR4v/air1.png"
+        },
+        "from_date": "2020-12-26T11:15:33Z",
+        "to_date": "2020-12-26T22:27:33Z",
+        "airplane_numbers": "2350"
+      },
+      "seat_type": {
+        "name": "일등석"
+      },
+      "price": "5300.00",
+      "remaining_seat": 10,
+      "total_seats": 10
+    },
+    {
+      "id": 7,
+      "airplane": {
+        "id": 24,
+        "from_region": {
+          "name": "양양",
+          "region_code": "TAE"
+        },
+        "to_region": {
+          "name": "대구",
+          "region_code": "KWJ"
+        },
+        "airline": {
+          "name": "규석 항공",
+          "image_url": "https://i.ibb.co/Zz5W94B/air5.png"
+        },
+        "from_date": "2020-12-24T13:33:33Z",
+        "to_date": "2020-12-24T21:30:33Z",
+        "airplane_numbers": "7903"
+      },
+      "seat_type": {
+        "name": "일등석"
+      },
+      "price": "2000.00",
+      "remaining_seat": 10,
+      "total_seats": 10
+    },
+    {
+      "id": 8,
+      "airplane": {
+        "id": 20707,
+        "from_region": {
+          "name": "부산",
+          "region_code": "PUS"
+        },
+        "to_region": {
+          "name": "청주여수",
+          "region_code": "CJJ"
+        },
+        "airline": {
+          "name": "병준 항공",
+          "image_url": "https://i.ibb.co/pfHVR4v/air1.png"
+        },
+        "from_date": "2020-12-26T13:31:33Z",
+        "to_date": "2020-12-26T22:14:33Z",
+        "airplane_numbers": "8241"
+      },
+      "seat_type": {
+        "name": "일등석"
+      },
+      "price": "9500.00",
+      "remaining_seat": 10,
+      "total_seats": 10
+    },
+    {
+      "id": 9,
+      "airplane": {
+        "id": 8206,
+        "from_region": {
+          "name": "부산",
+          "region_code": "PUS"
+        },
+        "to_region": {
+          "name": "대구",
+          "region_code": "KWJ"
+        },
+        "airline": {
+          "name": "병준 항공",
+          "image_url": "https://i.ibb.co/pfHVR4v/air1.png"
+        },
+        "from_date": "2020-12-24T12:47:33Z",
+        "to_date": "2020-12-24T20:25:33Z",
+        "airplane_numbers": "4415"
+      },
+      "seat_type": {
+        "name": "일등석"
+      },
+      "price": "4700.00",
+      "remaining_seat": 10,
+      "total_seats": 10
+    },
+    {
+      "id": 10,
+      "airplane": {
+        "id": 2586,
+        "from_region": {
+          "name": "양양",
+          "region_code": "TAE"
+        },
+        "to_region": {
+          "name": "대구",
+          "region_code": "KWJ"
+        },
+        "airline": {
+          "name": "리틀 항공",
+          "image_url": "https://i.ibb.co/cLRpxwR/airSY.png"
+        },
+        "from_date": "2020-12-24T12:15:33Z",
+        "to_date": "2020-12-24T20:41:33Z",
+        "airplane_numbers": "3421"
+      },
+      "seat_type": {
+        "name": "일등석"
+      },
+      "price": "6400.00",
+      "remaining_seat": 10,
+      "total_seats": 10
+    },
+    {
+      "id": 11,
+      "airplane": {
+        "id": 12254,
+        "from_region": {
+          "name": "제주",
+          "region_code": "CJU"
+        },
+        "to_region": {
+          "name": "청주여수",
+          "region_code": "CJJ"
+        },
+        "airline": {
+          "name": "승윤 항공",
+          "image_url": "https://i.ibb.co/NYynBtD/air4.png"
+        },
+        "from_date": "2020-12-24T12:38:33Z",
+        "to_date": "2020-12-24T22:22:33Z",
+        "airplane_numbers": "8173"
+      },
+      "seat_type": {
+        "name": "일등석"
+      },
+      "price": "3000.00",
+      "remaining_seat": 10,
+      "total_seats": 10
+    },
+    {
+      "id": 12,
+      "airplane": {
+        "id": 23343,
+        "from_region": {
+          "name": "대구",
+          "region_code": "KWJ"
+        },
+        "to_region": {
+          "name": "김포",
+          "region_code": "GMP"
+        },
+        "airline": {
+          "name": "승윤 항공",
+          "image_url": "https://i.ibb.co/NYynBtD/air4.png"
+        },
+        "from_date": "2020-12-26T11:27:33Z",
+        "to_date": "2020-12-26T20:15:33Z",
+        "airplane_numbers": "5747"
+      },
+      "seat_type": {
+        "name": "일등석"
+      },
+      "price": "400.00",
+      "remaining_seat": 10,
+      "total_seats": 10
+    },
+    {
+      "id": 13,
+      "airplane": {
+        "id": 5299,
+        "from_region": {
+          "name": "광주",
+          "region_code": "PSU"
+        },
+        "to_region": {
+          "name": "양양",
+          "region_code": "TAE"
+        },
+        "airline": {
+          "name": "에어 조던 항공",
+          "image_url": "https://i.ibb.co/42vfMkb/airo9.png"
+        },
+        "from_date": "2020-12-24T12:36:33Z",
+        "to_date": "2020-12-24T20:39:33Z",
+        "airplane_numbers": "6852"
+      },
+      "seat_type": {
+        "name": "일등석"
+      },
+      "price": "3400.00",
+      "remaining_seat": 10,
+      "total_seats": 10
+    },
+    {
+      "id": 14,
+      "airplane": {
+        "id": 10699,
+        "from_region": {
+          "name": "부산",
+          "region_code": "PUS"
+        },
+        "to_region": {
+          "name": "제주",
+          "region_code": "CJU"
+        },
+        "airline": {
+          "name": "병준 항공",
+          "image_url": "https://i.ibb.co/pfHVR4v/air1.png"
+        },
+        "from_date": "2020-12-24T13:10:33Z",
+        "to_date": "2020-12-24T21:49:33Z",
+        "airplane_numbers": "7065"
+      },
+      "seat_type": {
+        "name": "일등석"
+      },
+      "price": "2300.00",
+      "remaining_seat": 10,
+      "total_seats": 10
+    },
+    {
+      "id": 15,
+      "airplane": {
+        "id": 15568,
+        "from_region": {
+          "name": "부산",
+          "region_code": "PUS"
+        },
+        "to_region": {
+          "name": "청주여수",
+          "region_code": "CJJ"
+        },
+        "airline": {
+          "name": "승제 항공",
+          "image_url": "https://i.ibb.co/grzms59/air2.png"
+        },
+        "from_date": "2020-12-24T11:50:33Z",
+        "to_date": "2020-12-24T21:48:33Z",
+        "airplane_numbers": "2783"
+      },
+      "seat_type": {
+        "name": "일등석"
+      },
+      "price": "1300.00",
+      "remaining_seat": 10,
+      "total_seats": 10
+    },
+    {
+      "id": 16,
+      "airplane": {
+        "id": 19907,
+        "from_region": {
+          "name": "광주",
+          "region_code": "PSU"
+        },
+        "to_region": {
+          "name": "양양",
+          "region_code": "TAE"
+        },
+        "airline": {
+          "name": "에어 조던 항공",
+          "image_url": "https://i.ibb.co/42vfMkb/airo9.png"
+        },
+        "from_date": "2020-12-24T12:22:33Z",
+        "to_date": "2020-12-24T21:37:33Z",
+        "airplane_numbers": "3563"
+      },
+      "seat_type": {
+        "name": "일등석"
+      },
+      "price": "1500.00",
+      "remaining_seat": 10,
+      "total_seats": 10
+    },
+    {
+      "id": 17,
+      "airplane": {
+        "id": 29316,
+        "from_region": {
+          "name": "부산",
+          "region_code": "PUS"
+        },
+        "to_region": {
+          "name": "대구",
+          "region_code": "KWJ"
+        },
+        "airline": {
+          "name": "현지 항공",
+          "image_url": "https://i.ibb.co/YDVZ8t8/air3.png"
+        },
+        "from_date": "2020-12-26T13:34:33Z",
+        "to_date": "2020-12-26T20:45:33Z",
+        "airplane_numbers": "2932"
+      },
+      "seat_type": {
+        "name": "일등석"
+      },
+      "price": "9200.00",
+      "remaining_seat": 10,
+      "total_seats": 10
+    },
+    {
+      "id": 18,
+      "airplane": {
+        "id": 29960,
+        "from_region": {
+          "name": "김포",
+          "region_code": "GMP"
+        },
+        "to_region": {
+          "name": "광주",
+          "region_code": "PSU"
+        },
+        "airline": {
+          "name": "승제 항공",
+          "image_url": "https://i.ibb.co/grzms59/air2.png"
+        },
+        "from_date": "2020-12-26T10:37:33Z",
+        "to_date": "2020-12-26T21:13:33Z",
+        "airplane_numbers": "4832"
+      },
+      "seat_type": {
+        "name": "일등석"
+      },
+      "price": "4500.00",
+      "remaining_seat": 10,
+      "total_seats": 10
+    },
+    {
+      "id": 19,
+      "airplane": {
+        "id": 29979,
+        "from_region": {
+          "name": "양양",
+          "region_code": "TAE"
+        },
+        "to_region": {
+          "name": "부산",
+          "region_code": "PUS"
+        },
+        "airline": {
+          "name": "규석 항공",
+          "image_url": "https://i.ibb.co/Zz5W94B/air5.png"
+        },
+        "from_date": "2020-12-26T12:33:33Z",
+        "to_date": "2020-12-26T20:22:33Z",
+        "airplane_numbers": "9244"
+      },
+      "seat_type": {
+        "name": "일등석"
+      },
+      "price": "6700.00",
+      "remaining_seat": 10,
+      "total_seats": 10
+    },
+    {
+      "id": 20,
+      "airplane": {
+        "id": 7944,
+        "from_region": {
+          "name": "양양",
+          "region_code": "TAE"
+        },
+        "to_region": {
+          "name": "부산",
+          "region_code": "PUS"
+        },
+        "airline": {
+          "name": "승윤 항공",
+          "image_url": "https://i.ibb.co/NYynBtD/air4.png"
+        },
+        "from_date": "2020-12-24T12:20:33Z",
+        "to_date": "2020-12-24T21:37:33Z",
+        "airplane_numbers": "3253"
+      },
+      "seat_type": {
+        "name": "일등석"
+      },
+      "price": "9300.00",
+      "remaining_seat": 10,
+      "total_seats": 10
+    }
+  ]
+}

@@ -147,7 +147,6 @@ const TicketSelector = styled.div`
       }
     }
   }
-
   .dateInputWrap {
     display: flex;
     align-items: center;
@@ -164,7 +163,6 @@ const TicketSelector = styled.div`
       left: 5px;
     }
   }
-
   .userInfo {
     display: flex;
     align-items: center;
@@ -174,7 +172,6 @@ const TicketSelector = styled.div`
     font-weight: 500;
     background-color: white;
     border-radius: 3px;
-
     .userIcon {
       width: 20px;
       height: 20px;
@@ -193,7 +190,6 @@ const TicketSelector = styled.div`
       }
     }
   }
-
   .searchBtn {
     width: 70px;
     height: 40px;

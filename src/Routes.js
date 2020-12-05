@@ -4,12 +4,10 @@ import { ThemeProvider } from "styled-components";
 import Main from "./pages/Main/Main";
 import Signup from "./pages/Signup/Signup";
 import Login from "./pages/Login/Login";
-
 import LoadingScreen from "./Components/LoadingScreen/LoadingScreen";
 import List from "./pages/List/List";
 import { theme } from "./styles/theme";
 import GlobalStyle from "./styles/Globalstyles";
-
 import DestinationDesk from "./Components/TicketSelector/DestinationDesk";
 import TicketSelector from "./Components/TicketSelector/TicketSelector";
 

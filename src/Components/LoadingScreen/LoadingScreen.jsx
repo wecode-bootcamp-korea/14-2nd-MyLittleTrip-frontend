@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import { flexSet } from "../../styles/theme";
+import { theme, flexColumnCenter, flexCenter } from "../../styles/theme";
 
 // list component에서 3초? 5초?간 무조건 이 화면 보이게 할것!!
 // 동적 라우팅으로 list component로 연결될것이기 때문에 그 화면에서
