@@ -1,17 +1,18 @@
-import { css } from 'styled-components';
+import { css } from "styled-components";
 
 export const theme = {
-  lightBlue: '#73b5f3',
-  blue: '#53abf2',
-  deepBlue: '#2d97ed',
-  navy: '#216aad',
-  lightGray: '#e0e2e4',
-  gray: '#b4bcc3',
-  darkGray: '#495056b3',
-  lightBlack: '#353b40',
-  black: '#222222',
-  transparentWhite : "rgba(255,255,255,0.8)",
-  littletransparentWhite : 'rgba(255,255,255,0.9)'
+  lightBlue: "#73b5f3",
+  blue: "#53abf2",
+  deepBlue: "#2d97ed",
+  navy: "#216aad",
+  lightGray: "#e0e2e4",
+  gray: "#b4bcc3",
+  darkGray: "#495056b3",
+  lightBlack: "#353b40",
+  black: "#222222",
+  transparentWhite: "rgba(255,255,255,0.8)",
+  border01: "1px solid rgba(0, 0,  0,  0.1)",
+  littletransparentWhite: "rgba(255,255,255,0.9)",
 };
 
 export const flexSet = (justifyContent, alignItems, flexDirection) => css`
