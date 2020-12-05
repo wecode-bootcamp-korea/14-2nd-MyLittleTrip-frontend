@@ -33,7 +33,9 @@ const Navtrans = ({ themeColor }) => {
             <BsSearch
               className="searchIcon"
               size="1em"
-              color={themeColor === "normal" || isInputFocused ? "gray" : "white"}
+              color={
+                themeColor === "normal" || isInputFocused ? "gray" : "white"
+              }
             />
             <input
               type="text"
@@ -54,7 +56,9 @@ const Navtrans = ({ themeColor }) => {
                   className="userIcon"
                   onClick={handleProfilePicClick}
                   size="2em"
-                  color={themeColor === "normal" ? "gray" : theme.transparentWhite}
+                  color={
+                    themeColor === "normal" ? "gray" : theme.transparentWhite
+                  }
                 />
               </div>
             </LoginProfileBar>
@@ -80,7 +84,9 @@ const Navtrans = ({ themeColor }) => {
       <NavBottom themeColor={themeColor}>
         {CATEGORIES.map((category) => (
           <div className="categoryItem" key={category.id}>
-            <p className={category.name === "항공권" ? "selected" : ""}>{category.name}</p>
+            <p className={category.name === "항공권" ? "selected" : ""}>
+              {category.name}
+            </p>
           </div>
         ))}
       </NavBottom>
@@ -90,7 +96,10 @@ const Navtrans = ({ themeColor }) => {
 
 const LogoImage = styled.img.attrs((props) => ({
   alt: "my little trip logo",
-  src: props.themeColor === "normal" ? "/images/logo.png" : "/images/logo_white.png",
+  src:
+    props.themeColor === "normal"
+      ? "/images/logo.png"
+      : "/images/logo_white.png",
 }))`
   width: 128px;
   margin: 0 20px;
@@ -99,7 +108,10 @@ const LogoImage = styled.img.attrs((props) => ({
 const NavContainer = styled.div`
   z-index: 100;
   border-bottom: 1px solid
-    ${(props) => (props.themeColor === "normal" ? "rgba(0,0,0,0.05)" : "rgba(255, 255, 255, 0.2)")};
+    ${(props) =>
+      props.themeColor === "normal"
+        ? "rgba(0,0,0,0.05)"
+        : "rgba(255, 255, 255, 0.2)"};
 `;
 
 const Navbar = styled.nav`
@@ -130,27 +142,36 @@ const Navbar = styled.nav`
         height: 48px;
         margin-left: 10px;
         padding-left: 40px;
-        color: ${(props) => (props.themeColor === "normal" ? "rgba(0,0,0,0.8)" : "white")};
+        color: ${(props) =>
+          props.themeColor === "normal" ? "rgba(0,0,0,0.8)" : "white"};
         background-color: ${(props) =>
-          props.themeColor === "normal" ? "rgba(0, 0, 0, 0.05)" : "rgba(255, 255, 255, 0.15)"};
+          props.themeColor === "normal"
+            ? "rgba(0, 0, 0, 0.05)"
+            : "rgba(255, 255, 255, 0.15)"};
         font-size: 15px;
         border-radius: 4px;
         transition: ease-in-out 0.5s;
 
         &::placeholder {
-          color: ${({ themeColor, theme }) => (themeColor === "normal" ? "rgba(0,0,0,0.5)" : theme.transparentWhite)};
+          color: ${({ themeColor, theme }) =>
+            themeColor === "normal"
+              ? "rgba(0,0,0,0.5)"
+              : theme.transparentWhite};
         }
 
         &:hover {
           background-color: ${(props) =>
-            props.themeColor === "normal" ? "rgba(136, 16, 16, 0.06)" : "rgba(255, 255, 255, 0.25)"};
+            props.themeColor === "normal"
+              ? "rgba(136, 16, 16, 0.06)"
+              : "rgba(255, 255, 255, 0.25)"};
         }
 
         &:focus {
           outline: none;
           background-color: white;
           color: rgba(0, 0, 0, 0.8);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+            0 1px 3px rgba(0, 0, 0, 0.12);
           transition: ease-in-out 0.5s;
         }
       }
@@ -164,7 +185,8 @@ const Navbar = styled.nav`
     p {
       margin-right: 20px;
       font-size: 15px;
-      color: ${({ themeColor, theme }) => (themeColor === "normal" ? "#666d75" : theme.transparentWhite)};
+      color: ${({ themeColor, theme }) =>
+        themeColor === "normal" ? "#666d75" : theme.transparentWhite};
       cursor: pointer;
     }
 
@@ -185,7 +207,8 @@ const NavBottom = styled.nav`
 
     p {
       padding: 15px 7px;
-      color: ${({ themeColor, theme }) => (themeColor === "normal" ? theme.darkGray : "rgba(255,255,255,0.7)")};
+      color: ${({ themeColor, theme }) =>
+        themeColor === "normal" ? theme.darkGray : "rgba(255,255,255,0.7)"};
       font-size: 16px;
       font-weight: 500;
       cursor: pointer;
@@ -194,14 +217,19 @@ const NavBottom = styled.nav`
 
       &:hover {
         border-bottom: 4px solid
-          ${({ themeColor, theme }) => (themeColor === "normal" ? theme.lightBlue : "rgba(255,255,255,0.5)")};
+          ${({ themeColor, theme }) =>
+            themeColor === "normal"
+              ? theme.lightBlue
+              : "rgba(255,255,255,0.5)"};
         transition: ease-in-out 0.2s;
       }
 
       &.selected {
         text-align: center;
-        color: ${(props) => (props.themeColor === "normal" ? "#495056" : "white")};
-        border-bottom: 4px solid ${(props) => (props.themeColor === "normal" ? "#3c92e0" : "white")};
+        color: ${(props) =>
+          props.themeColor === "normal" ? "#495056" : "white"};
+        border-bottom: 4px solid
+          ${(props) => (props.themeColor === "normal" ? "#3c92e0" : "white")};
       }
     }
   }
@@ -215,12 +243,16 @@ const LoginProfileBar = styled.div`
     padding: 7px 10px;
     margin-right: 10px;
     font-size: 15px;
-    color: ${({ themeColor, theme }) => (themeColor === "normal" ? "#666d75" : theme.transparentWhite)};
+    color: ${({ themeColor, theme }) =>
+      themeColor === "normal" ? "#666d75" : theme.transparentWhite};
     transition: ease-in-out 0.2s;
     cursor: pointer;
 
     &:hover {
-      background-color: ${(props) => (props.themeColor === "normal" ? "rgba(0,0,0,0.05)" : "rgba(255,255,255,0.2)")};
+      background-color: ${(props) =>
+        props.themeColor === "normal"
+          ? "rgba(0,0,0,0.05)"
+          : "rgba(255,255,255,0.2)"};
       border-radius: 4px;
       transition: ease-in-out 0.2s;
     }
@@ -238,33 +270,42 @@ const LogoutProfileBar = styled.div`
   p {
     margin-left: 10px;
     padding: 7px 10px;
-    color: ${({ themeColor, theme }) => (themeColor === "normal" ? "#666d75" : theme.transparentWhite)};
+    color: ${({ themeColor, theme }) =>
+      themeColor === "normal" ? "#666d75" : theme.transparentWhite};
     font-size: 15px;
     border-radius: 3px;
     transition: ease-in-out 0.2s;
     cursor: pointer;
 
     &:hover {
-      background-color: ${(props) => (props.themeColor === "normal" ? "rgba(0,0,0,0.05)" : "rgba(255,255,255,0.2)")};
+      background-color: ${(props) =>
+        props.themeColor === "normal"
+          ? "rgba(0,0,0,0.05)"
+          : "rgba(255,255,255,0.2)"};
       transition: ease-in-out 0.2s;
     }
 
     a {
-      color: ${({ themeColor, theme }) => (themeColor === "normal" ? "#666d75" : theme.transparentWhite)};
+      color: ${({ themeColor, theme }) =>
+        themeColor === "normal" ? "#666d75" : theme.transparentWhite};
     }
 
     &.signUpButton {
       padding: 9px 30px 7px 30px;
       border: 1px solid
-        ${({ themeColor, theme }) => (themeColor === "normal" ? theme.deepBlue : theme.transparentWhite)};
+        ${({ themeColor, theme }) =>
+          themeColor === "normal" ? theme.deepBlue : theme.transparentWhite};
 
       &:hover {
         background-color: ${(props) =>
-          props.themeColor === "normal" ? "rgba(79, 171, 242, 0.1)" : "rgba(255,255,255,0.2)"};
+          props.themeColor === "normal"
+            ? "rgba(79, 171, 242, 0.1)"
+            : "rgba(255,255,255,0.2)"};
         transition: ease-in-out 0.2s;
       }
       a {
-        color: ${({ themeColor, theme }) => (themeColor === "normal" ? theme.deepBlue : theme.transparentWhite)};
+        color: ${({ themeColor, theme }) =>
+          themeColor === "normal" ? theme.deepBlue : theme.transparentWhite};
       }
     }
   }
