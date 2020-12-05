@@ -1,16 +1,24 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import Ticket from "./Ticket";
+import styled from "styled-components";
 
 class TicketList extends Component {
+  constructor() {
+    super();
+  }
+
   render() {
-    const { ticket } = this.props;
+    const { ticket, addSelected, selected } = this.props;
+
     return (
-      <div className="ticketList">
-        {ticket.length && (
+      <Div>
+        {!!ticket.length && (
           <ul>
-            {ticket.map((el) => (
+            {ticket.map((el, idx) => (
               <Ticket
-                key={el.id}
+                key={idx}
+                id={el.id}
                 airlineName={el.airplane.airline.name}
                 airlineEnName={el.airplane.airplane_numbers}
                 airlineIcon={el.airplane.airline.image_url}
@@ -21,13 +29,20 @@ class TicketList extends Component {
                 fromCode={el.airplane.from_region.region_code}
                 toCode={el.airplane.to_region.region_code}
                 countSeat={el.remaining_seat}
+                addSelected={addSelected}
+                el={el}
+                selected={selected}
               />
             ))}
           </ul>
         )}
-      </div>
+      </Div>
     );
   }
 }
 
-export default TicketList;
+const Div = styled.div`
+  position: relative;
+`;
+
+export default withRouter(TicketList);

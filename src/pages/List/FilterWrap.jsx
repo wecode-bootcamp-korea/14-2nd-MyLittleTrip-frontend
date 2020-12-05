@@ -6,12 +6,11 @@ import { theme, flexColumn } from "../../styles/theme";
 
 class FilterWrap extends Component {
   render() {
-    const { title, items } = this.props;
-
+    const { filter, handleCheckboxValue } = this.props;
     return (
       <FilterContainer>
         <ClickTab>
-          <div className="tabHeader">{title}</div>
+          <div className="tabHeader">{filter && filter.title}</div>
           <div>
             <BiUpArrow className="sildeClose" />
           </div>
@@ -21,9 +20,15 @@ class FilterWrap extends Component {
             <span>모두 선택</span>|<span>모두 해제</span>
           </div>
           <ul>
-            {items.map((items, idx) => (
-              <FilterIndex key={idx} items={items} />
-            ))}
+            {filter &&
+              filter.index.map((item, idx) => (
+                <FilterIndex
+                  key={idx}
+                  items={filter}
+                  item={item}
+                  handleCheckboxValue={handleCheckboxValue}
+                />
+              ))}
           </ul>
         </CheckboxWrap>
       </FilterContainer>

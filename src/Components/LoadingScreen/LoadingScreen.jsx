@@ -9,10 +9,13 @@ import styled, { keyframes } from "styled-components";
 const LoadingScreen = (props) => {
   const location = useLocation();
   const { searchInfo } = location.state;
+  // setTimeout(() => this.setState({ loading: true }), 5000);
 
   const dateFormatter = (date) => {
     const toFormat = new Date(date);
-    return `${toFormat.getFullYear()}년 ${toFormat.getMonth() + 1}월 ${toFormat.getDate()}일`;
+    return `${toFormat.getFullYear()}년 ${
+      toFormat.getMonth() + 1
+    }월 ${toFormat.getDate()}일`;
   };
 
   return (

@@ -4,14 +4,33 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 
 class PickedTicket extends Component {
   render() {
+    const { location, selected } = this.props;
+
     return (
-      <PickTicket>
-        <div className="fromTo">가는편</div>
-        <div className="whereToWhere">
-          부산 <FaLongArrowAltRight className="arrow" /> 서울
-        </div>
-        <div className="date">date</div>
-      </PickTicket>
+      <>
+        {!selected.length && (
+          <PickTicket>
+            <div className="fromTo">가는편</div>
+            <div className="whereToWhere">
+              {location.state.searchInfo.depPlace}
+              <FaLongArrowAltRight className="arrow" />
+              {location.state.searchInfo.arrPlace}
+            </div>
+            <div className="date"></div>
+          </PickTicket>
+        )}
+        {!!selected.length && (
+          <PickTicket>
+            <div className="fromTo">오는편</div>
+            <div className="whereToWhere">
+              {location.state.searchInfo.arrPlace}
+              <FaLongArrowAltRight className="arrow" />
+              {location.state.searchInfo.depPlace}
+            </div>
+            <div className="date"></div>
+          </PickTicket>
+        )}
+      </>
     );
   }
 }
