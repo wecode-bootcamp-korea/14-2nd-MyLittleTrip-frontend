@@ -4,6 +4,7 @@ import styled from "styled-components";
 class InfoContainer extends Component {
   render() {
     const { listLength } = this.props;
+
     return (
       <SearchResult>
         <div className="container">

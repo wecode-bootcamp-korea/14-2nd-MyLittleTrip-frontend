@@ -16,8 +16,14 @@ class Ticket extends Component {
 
     return `${hour}시간 ${min}분`;
   };
+  handleclicked = () => {
+    this.props.addSelected(this.props.el);
+  };
+
   render() {
     const {
+      ticket,
+      id,
       airlineIcon,
       airlineName,
       airlineEnName,
@@ -28,6 +34,9 @@ class Ticket extends Component {
       fromCode,
       toCode,
       countSeat,
+      addSelected,
+      selected,
+      el,
     } = this.props;
 
     const DepartTime = this.props.departTime;
@@ -73,7 +82,9 @@ class Ticket extends Component {
         <span className="ticketType">{seatType}</span>
         <span className="countSeat">{countSeat}석</span>
         <strong className="price">{Number(price).toLocaleString(2)}원</strong>
-        <button className="pickButton">선택</button>
+        <button className="pickButton" onClick={this.handleclicked}>
+          선택
+        </button>
       </TicketComponent>
     );
   }

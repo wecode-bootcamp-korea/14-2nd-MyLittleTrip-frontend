@@ -11,7 +11,7 @@ import GlobalStyle from "./styles/Globalstyles";
 import DestinationDesk from "./Components/TicketSelector/DestinationDesk";
 import TicketSelector from "./Components/TicketSelector/TicketSelector";
 import Reservation from "./pages/Reservation/Reservation";
-
+import Booking from "./pages/Booking/Booking";
 
 class Routes extends Component {
   render() {
@@ -26,12 +26,12 @@ class Routes extends Component {
             <Route exact path="/loading" component={LoadingScreen} />
             <Route exact path="/list" component={List} />
             <Route exact path="/reservation" component={Reservation} />
+            <Route exact path="/Booking" component={Booking} />
           </Switch>
         </ThemeProvider>
       </Router>
     );
   }
 }
-
 
 export default Routes;

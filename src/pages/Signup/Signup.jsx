@@ -10,15 +10,12 @@ import {
   OtherOptions,
 } from "../../Components/StyledComponents/Greeting";
 import { KAKAO_SIGNUP_API } from "../../config";
-
 const { Kakao } = window;
-
 const Signup = (props) => {
   const kakaoSignup = () => {
     Kakao.init(process.env.REACT_APP_KAKAO_LOGIN_API_KEY);
     Kakao.Auth.login({
       success: (authObj) => {
-        console.log("signup", authObj);
         fetch(KAKAO_SIGNUP_API, {
           method: "post",
           headers: { Authorization: authObj.access_token },
@@ -30,7 +27,6 @@ const Signup = (props) => {
               props.history.push("/login");
               return;
             }
-            console.log(res.message);
           });
       },
       fail: (err) => {
@@ -38,7 +34,6 @@ const Signup = (props) => {
       },
     });
   };
-
   return (
     <>
       <Navtrans themeColor="normal" />
@@ -48,16 +43,25 @@ const Signup = (props) => {
           <p className="greetingTitle">반갑습니다!</p>
           <p className="greetingText">여행의 모든 것, 마이리틀트립</p>
           <KakaoButton onClick={kakaoSignup}>
-            <img src="https://i.ibb.co/vzxFhCS/2020-12-03-5-12-24.png" alt="kakao logo" />
+            <img
+              src="https://i.ibb.co/vzxFhCS/2020-12-03-5-12-24.png"
+              alt="kakao logo"
+            />
             <span>카카오로 바로 시작</span>
           </KakaoButton>
           <OtherOptions>
             <div className="otherPlatform">
-              <img src="https://i.ibb.co/Y2k6M9t/iconfinder-square-facebook-317727.png" alt="facebook" />
+              <img
+                src="https://i.ibb.co/Y2k6M9t/iconfinder-square-facebook-317727.png"
+                alt="facebook"
+              />
               <span>페이스북</span>
               <img src="https://i.ibb.co/RyPYGX6/naverBtn.png" alt="naver" />
               <span>네이버</span>
-              <img src="https://i.ibb.co/ynrJV6x/iconfinder-112-gmail-email-mail-4202011.png" alt="email" />
+              <img
+                src="https://i.ibb.co/ynrJV6x/iconfinder-112-gmail-email-mail-4202011.png"
+                alt="email"
+              />
               <span>이메일</span>
             </div>
             <div className="gotoLogin">
@@ -71,5 +75,4 @@ const Signup = (props) => {
     </>
   );
 };
-
 export default Signup;
