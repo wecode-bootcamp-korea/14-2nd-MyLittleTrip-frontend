@@ -29,14 +29,7 @@ class DestinationDesk extends Component {
 
   render() {
     const { location } = this.state;
-    const {
-      top,
-      left,
-      closeDestination,
-      selectDepPlace,
-      selectArrPlace,
-    } = this.props;
-
+    const { top, left, closeDestination, selectDepPlace, selectArrPlace } = this.props;
     return (
       <Desk top={top} left={left}>
         <DeskContainer>
@@ -116,7 +109,6 @@ const MainTop = styled.div`
   margin: 20px 0;
   border: ${theme.border01};
   border-radius: 5px;
-
   input {
     width: 79%;
     height: 100%;
@@ -125,7 +117,6 @@ const MainTop = styled.div`
     border-radius: 5px;
     outline: none;
   }
-
   button {
     width: 19%;
     height: 47px;
@@ -138,7 +129,6 @@ const MainTop = styled.div`
 const MainBottom = styled.div`
   color: ${theme.lightBlack};
   font-size: 13px;
-
   .bottomHeader {
     font-size: 16px;
     padding-bottom: 15px;

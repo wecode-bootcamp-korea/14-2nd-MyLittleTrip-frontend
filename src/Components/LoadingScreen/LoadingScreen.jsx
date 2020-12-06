@@ -1,8 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
-import { flexSet } from "../../styles/theme";
-import { theme, flexColumnCenter, flexCenter } from "../../styles/theme";
 
 // list component에서 3초? 5초?간 무조건 이 화면 보이게 할것!!
 // 동적 라우팅으로 list component로 연결될것이기 때문에 그 화면에서
@@ -10,27 +8,30 @@ import { theme, flexColumnCenter, flexCenter } from "../../styles/theme";
 
 const LoadingScreen = (props) => {
   const location = useLocation();
-  console.log(location); //location에서 한글을 받아올 수는 없나요..? 그냥 state도 담아서 보내야겠네요...ㅠ
+  const { searchInfo } = location.state;
+
+  const dateFormatter = (date) => {
+    const toFormat = new Date(date);
+    return `${toFormat.getFullYear()}년 ${toFormat.getMonth() + 1}월 ${toFormat.getDate()}일`;
+  };
 
   return (
     <LoadingScreenContainer>
       <LoadingBackgroundImg src={BG_IMAGE} />
       <FlightInfo>
         <p className="infoTitle">
-          김포부터 제주까지
+          {searchInfo.depPlace}부터 {searchInfo.arrPlace}까지
           <br /> 왕복 항공권을 찾고 있습니다.
         </p>
         <div className="fromToContainer">
           <FromTo>
-            <span className="code">GMP</span>
-            <span className="name">김포</span>
-            <span className="date">2020년 12월 10일</span>
+            <span className="name">{searchInfo.depPlace}</span>
+            <span className="date">{dateFormatter(searchInfo.startDate)}</span>
           </FromTo>
           <img src={CONNECT_IMAGE} alt="from to" />
           <FromTo>
-            <span>CJU</span>
-            <span>제주</span>
-            <span>2020년 12월 10일</span>
+            <span>{searchInfo.arrPlace}</span>
+            <span>{dateFormatter(searchInfo.endDate)}</span>
           </FromTo>
         </div>
         <p>
@@ -73,7 +74,9 @@ const LoadingBackgroundImg = styled.img.attrs((props) => ({
 `;
 
 const FlightInfo = styled.div`
-  ${flexSet("", "center", "column")};
+  ${({ theme }) => {
+    return theme.flexSet({ alignItems: "center", flexDirection: "column" });
+  }};
   position: fixed;
   left: 0;
   right: 0;
@@ -100,7 +103,9 @@ const FlightInfo = styled.div`
   }
 
   .fromToContainer {
-    ${flexSet("center", "center", "")};
+    ${({ theme }) => {
+      return theme.flexSet({ justifyContent: "center", alignItems: "center" });
+    }}
     width: 300px;
     padding: 10px 0;
     margin: 30px 0;
@@ -114,7 +119,9 @@ const FlightInfo = styled.div`
 `;
 
 const FromTo = styled.div`
-  ${flexSet("", "center", "column")};
+  ${({ theme }) => {
+    return theme.flexSet({ alignItems: "center", flexDirection: "column" });
+  }}
   padding: 5px 0;
   span {
     color: ${({ theme }) => theme.littletransparentWhite};

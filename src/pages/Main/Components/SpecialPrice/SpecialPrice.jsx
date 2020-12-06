@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { withRouter } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import Slider from "react-slick";
 import {
@@ -22,6 +22,7 @@ const sliderSettings = {
 const SpecialPrice = (props) => {
   const [currentPage, setCurrentPage] = useState(1);
   const sliderRef = useRef(null);
+  const history = useHistory();
 
   const slidePrevious = () => {
     sliderRef.current.slickPrev();
@@ -33,10 +34,31 @@ const SpecialPrice = (props) => {
     setCurrentPage(currentPage + 1);
   };
 
+  const makeQueryString = (obj) => {
+    const entries = Object.entries(obj);
+    const newEntries = entries.reduce((acc, val, idx) => {
+      if (val[0] === "id") return acc;
+      return [...acc, `${val[0]}=${val[1]}`];
+    }, []);
+    return "?" + newEntries.join("&");
+  };
+
   const handleCardClick = (clicked) => {
-    props.history.push(
-      `/list?from=${clicked.departAirport}&to=${clicked.arriveAirport}&fromDate=${clicked.departDate}&toDate=${clicked.arriveDate}&count=1&type=일반석`
-    );
+    const searchInfo = {
+      id: Date.now(),
+      depPlace: clicked.departAirport,
+      arrPlace: clicked.arriveAirport,
+      startDate: clicked.departDate,
+      endDate: clicked.arriveDate,
+      headCount: 1,
+      seatType: "일반석",
+    };
+
+    history.push({
+      pathname: "/list",
+      search: makeQueryString(searchInfo),
+      state: { searchInfo },
+    });
   };
 
   return (
@@ -124,4 +146,4 @@ const SpecialCard = styled.div`
   }
 `;
 
-export default withRouter(SpecialPrice);
+export default SpecialPrice;

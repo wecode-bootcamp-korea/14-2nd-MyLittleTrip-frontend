@@ -7,34 +7,44 @@ import { useHistory } from "react-router-dom";
 const RecentItem = ({ recentdata, handleDeleteClick }) => {
   const history = useHistory();
 
+  const makeQueryString = (obj) => {
+    const entries = Object.entries(obj);
+    const newEntries = entries.reduce((acc, val, idx) => {
+      if (val[0] === "id") return acc;
+      return [...acc, `${val[0]}=${val[1]}`];
+    }, []);
+    return "?" + newEntries.join("&");
+  };
+
   const handleCardClick = () => {
-    history.push(
-      `/list?from=${recentdata.departAirport}&to=${recentdata.arriveAirport}&fromDate=${recentdata.departDate}&toDate=${recentdata.arriveDate}&count=${recentdata.headCount}&type=${recentdata.seatType}`
-    );
+    history.push({
+      pathname: "/list",
+      search: makeQueryString(recentdata),
+      state: { searchInfo: recentdata },
+    });
   };
 
   const handleDelete = (e) => {
     handleDeleteClick(e, recentdata);
   };
 
+  const startDate = new Date(recentdata.startDate);
+  const endDate = new Date(recentdata.endDate);
+
   return (
     <div>
       <RecentItemContainer onClick={handleCardClick}>
         <p>왕복</p>
         <div className="fromTo">
-          <span>
-            {recentdata.departAirport} ({recentdata.departCode})
-          </span>
+          <span>{recentdata.depPlace}</span>
           <CgArrowsExchangeAlt size="1.8em" color="gray" />
-          <span>
-            {recentdata.arriveAirport} ({recentdata.arriveCode})
-          </span>
+          <span>{recentdata.arrPlace}</span>
         </div>
         <div className="detailInfo">
           <span>
-            {`${+recentdata.departDate.split("-")[1]}월 ${+recentdata.departDate.split(
-              "-"
-            )[2]}일 - ${+recentdata.arriveDate.split("-")[1]}월 ${+recentdata.arriveDate.split("-")[2]}일`}
+            {`${startDate.getMonth() + 1}월 ${startDate.getDate()}일 - ${
+              endDate.getMonth() + 1
+            }월 ${endDate.getDate()}일`}
           </span>
           <span>성인 {recentdata.headCount}</span>
           <span>{recentdata.seatType}</span>

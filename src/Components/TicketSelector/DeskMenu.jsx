@@ -37,12 +37,7 @@ class DeskMenu extends Component {
   };
 
   render() {
-    const {
-      region,
-      selectDepPlace,
-      selectArrPlace,
-      closeDestination,
-    } = this.props;
+    const { region, selectDepPlace, selectArrPlace, closeDestination } = this.props;
     const { sortedLocations } = this.state;
     return (
       <DeskList>
@@ -55,11 +50,7 @@ class DeskMenu extends Component {
           {sortedLocations.map((locate, idx) => (
             <tr key={idx}>
               {locate.map((el, index) => (
-                <td
-                  key={index}
-                  className="deskList"
-                  onClick={this.handleTdvalue}
-                >
+                <td key={index} className="deskList" onClick={this.handleTdvalue}>
                   {el}
                 </td>
               ))}
@@ -76,14 +67,12 @@ const border = "1px solid rgba(0, 0, 0, 0.1)";
 const DeskList = styled.div`
   display: flex;
   width: 681px;
-
   border-bottom: ${border};
 `;
 
 const Thead = styled.thead`
   display: flex;
   align-items: center;
-
   th {
     display: flex;
     justify-content: flex-start;
@@ -99,7 +88,6 @@ const Tbody = styled.tbody`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   tr {
     display: flex;
     align-items: center;
@@ -108,7 +96,6 @@ const Tbody = styled.tbody`
       width: 150px;
       margin: auto 0;
       padding: 15px 0 15px 5px;
-
       cursor: pointer;
     }
   }
