@@ -4,6 +4,7 @@ import { IoIosArrowDroprightCircle } from "react-icons/io";
 import { ImCheckboxUnchecked, ImCheckboxChecked } from "react-icons/im";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
 import Navtrans from "../../../../Components/Navtrans/Navtrans";
+import TicketSelector from "../../../../Components/TicketSelector/TicketSelector";
 import { theme, flexSet } from "../../../../styles/theme";
 
 const MainHeader = (props) => {
@@ -11,7 +12,7 @@ const MainHeader = (props) => {
   const [isCheckedRight, setIsCheckedRight] = useState(false);
   return (
     <MainHeaderContainer>
-      <Navtrans />
+      <Navtrans themeColor="" />
       <div className="imageContainer">
         <img className="bannerImage" src="https://i.ibb.co/DbLkYd1/darkened.jpg" alt="banner" />
       </div>
@@ -32,7 +33,7 @@ const MainHeader = (props) => {
           </div>
         </Option>
       </TicketOptionTop>
-      {/* 여기에 승윤님의 컴포넌트가 들어온다 */}
+      <TicketSelector top="50px" />
       <TicketOptionBottom>
         <div className="checkBoxContainer">
           {isCheckedLeft ? (
@@ -75,19 +76,25 @@ const MainHeaderContainer = styled.div`
 `;
 
 const TicketOptionTop = styled.section`
-  ${flexSet("space-between", "center", "row")};
+  ${({ theme }) => {
+    return theme.flexSet({ justifyContent: "space-between", alignItems: "center" });
+  }}
   position: relative;
   width: 1060px;
   padding: 25px 0;
+  margin: 20px 0 17px 0;
 `;
 
 const Option = styled.div`
   ${flexSet("", "center")};
+  ${({ theme }) => {
+    return theme.flexSet({ alignItems: "center" });
+  }}
   position: absolute;
   top: 20px;
   ${({ direction }) => (direction === "left" ? "left : 0" : "right: 0")};
   color: rgba(255, 255, 255, 0.6);
-  font-size: 0.9rem;
+  font-size: 1rem;
   cursor: pointer;
 
   span {
@@ -101,11 +108,11 @@ const Option = styled.div`
           margin-top: 3px;
           font-weight: bold;
           color : rgba(255, 255, 255, 0.8);
-          border-bottom: 3px solid ${({ theme }) => theme.transparentWhite};
+          border-bottom : 3px solid ${theme.transparentWhite};
         }
         
         span:hover{
-          color: ${({ theme }) => theme.transparentWhite};
+          color: ${theme.transparentWhite};
         }
       `
       : `.arrowIcon{

@@ -20,21 +20,17 @@ const Login = (props) => {
         console.log("login", authObj);
         fetch(KAKAO_LOGIN_API, {
           method: "post",
-          // headers: { Authorization: authObj.access_token }, 일단 지금은 바디인데 나중에 헤더로 수정하신다고 합니다~
-          body: JSON.stringify({
-            Authorization: authObj.access_token,
-          }),
+          headers: { Authorization: authObj.access_token },
         })
           .then((res) => res.json())
           .then((res) => {
-            if (res.Authorization) {
-              localStorage.setItem("token", res.Authorization);
+            if (res.access_token) {
+              localStorage.setItem("token", res.access_token);
               alert("환영합니다");
               props.history.push("/");
               return;
             }
             console.log(res);
-            alert(res);
           });
       },
       fail: (err) => {

@@ -4,15 +4,20 @@ import { FaUserCircle } from "react-icons/fa";
 import { RiCoupon3Line } from "react-icons/ri";
 import { FiPlusCircle, FiGift } from "react-icons/fi";
 import { useOutsideClick } from "../../Hooks/clickOutside";
+import { useSelector, useDispatch } from "react-redux";
+import { removeUserInformation, loggedOut } from "../../../store/actions";
 
-const ProfileMenu = ({ visible, setProfileVisible, profileImageRef, setIsLogined }) => {
+const ProfileMenu = ({ visible, setProfileVisible, profileImageRef }) => {
   const containerRef = useRef(null);
+  const userInfo = useSelector((store) => store.userInfoReducer);
+  const dispatch = useDispatch();
 
   useOutsideClick(containerRef, setProfileVisible, profileImageRef);
 
   const logoutClick = () => {
-    // localStorage.removeItem("token"); //일단 이렇게 두겠습니다...토큰은 소듕하니까
-    setIsLogined(false);
+    localStorage.removeItem("token"); //일단 이렇게 두겠습니다...토큰은 소듕하니까
+    dispatch(loggedOut());
+    dispatch(removeUserInformation());
   };
 
   return (
@@ -22,7 +27,7 @@ const ProfileMenu = ({ visible, setProfileVisible, profileImageRef, setIsLogined
           <FaUserCircle className="userIcon" size="2em" color="gray" />
         </div>
         <div className="userInfoRight">
-          <p className="userName">기맹끼</p>
+          <p className="userName">{userInfo && userInfo.name}</p>
           <p>프로필 관리</p>
         </div>
       </div>

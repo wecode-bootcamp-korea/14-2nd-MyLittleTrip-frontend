@@ -26,8 +26,9 @@ class List extends Component {
     fetch("/data/productList.json")
       .then((res) => res.json())
       .then((res) => {
-        this.setState({ ticket: res.data, loading: true });
+        this.setState({ ticket: res.data });
       });
+    setTimeout(() => this.setState({ loading: true }), 5000);
   }
 
   render() {
@@ -41,18 +42,14 @@ class List extends Component {
             <MainListHeader>
               <div className="headerWrap">
                 <div className="upperHeader">왕복</div>
-                <TicketSelctor />
+                <TicketSelctor top="215px" />
               </div>
             </MainListHeader>
             <Selected />
             <MainBody>
               <div className="filterContainer">
                 {FILTERING.map((filter) => (
-                  <FilterWrap
-                    key={filter.id}
-                    title={filter.title}
-                    items={filter.index}
-                  />
+                  <FilterWrap key={filter.id} title={filter.title} items={filter.index} />
                 ))}
               </div>
               <div className="mainRight">
