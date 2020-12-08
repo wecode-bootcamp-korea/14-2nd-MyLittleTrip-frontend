@@ -1,0 +1,47 @@
+{
+  "ticketdata": [
+
+    {
+      "departure" : "김포",
+      "flydate" : "12월08일",
+      "arrival" : "제주",
+      "airline" : "에어조던",
+      "flytype" : "왕복",
+      "class" : "특가석",
+      "passenger" : "1명"
+    },
+    {
+      "departure" : "제주",
+      "flydate" : "12월12일",
+      "arrival" : "김포",
+      "airline" : "에어조던",
+      "flytype" : "왕복",
+      "class" : "특가석",
+      "passenger" : "1명"
+    }
+  ],
+
+  "flyinfo": [
+
+    {
+      "flyschedule" : "가는날",
+      "flynumber" : "RS07번",
+      "destination" : "김포-제주",
+      "departureday" : "12월 08일(화)",
+      "departuretime" : "17:40",
+      "arrivaltime" : "18:50",
+      "class" : "특가석",
+      "passenger" : "1명"
+    },
+    {
+      "flyschedule" : "가는날",
+      "flynumber" : "RS07번",
+      "destination" : "제주-김포",
+      "departureday" : "12월 12일(토)",
+      "departuretime" : "07:05",
+      "arrivaltime" : "08:15",
+      "class" : "특가석",
+      "passenger" : "1명"
+    }
+  ]
+}

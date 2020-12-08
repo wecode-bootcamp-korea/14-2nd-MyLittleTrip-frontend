@@ -1,0 +1,199 @@
+@import '../../../../styles/common.scss';
+
+.CardInfo {
+  @include inputBorder;
+  height: 600px;
+  width: 728px;
+
+  h4 {
+    height: 30px;
+    width: 727px;
+    padding: 10px 20px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: $primaryColor;
+    color: white;
+  }
+
+  .cardInfoContainer {
+    height: 569px;
+    width: 727px;
+    margin-bottom: 30px;
+    padding: 24px;
+    background-color: #f5f6f7;
+
+    .cardInfo {
+      height: 525px;
+      width: 678px;
+
+      .total {
+        @include cardInfoLine;
+
+        .totalKR {
+          @include cardInfoList;
+        }
+        .totalNumber {
+          height: 21px;
+          width: 486px;
+          padding: 16px;
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+
+      .owner {
+        @include cardInfoLine;
+
+        .ownerKR {
+          @include cardInfoList;
+        }
+
+        .inputConatainer {
+          display: flex;
+          width: 486px;
+          padding: 0 16px;
+          align-items: center;
+
+          input {
+            @include inputBorder;
+            height: 40px;
+            width: 147px;
+            padding: 10px 12px 10px 12px;
+            align-items: center;
+          }
+        }
+      }
+
+      .number {
+        @include cardInfoLine;
+
+        .numberKR {
+          @include cardInfoList;
+        }
+        .numberInfo {
+          width: 486px;
+          padding: 5px 16px;
+          margin: 0 1px;
+
+          select {
+            @include inputBorder;
+            width: 128px;
+            padding: 11px 12px;
+          }
+
+          .firstNumber {
+            @include inputBorder;
+            height: 40px;
+            width: 60px;
+            padding: 10px 12px;
+            margin-left: 20px;
+          }
+
+          input {
+            @include inputBorder;
+            height: 40px;
+            width: 60px;
+            padding: 10px 12px;
+            margin-left: 5px;
+          }
+        }
+      }
+
+      .cardExp {
+        @include cardInfoLine;
+
+        .cardExpKR {
+          @include cardInfoList;
+        }
+
+        .expInfo {
+          width: 486px;
+          padding: 5px 16px;
+          margin: 0 1px;
+
+          .year {
+            @include inputBorder;
+            width: 128px;
+            padding: 11px 12px;
+          }
+
+          .month {
+            @include inputBorder;
+            width: 128px;
+            padding: 11px 12px;
+            margin-left: 20px;
+          }
+        }
+      }
+
+      .monthlyPay {
+        @include cardInfoLine;
+
+        .monthlyPayKR {
+          @include cardInfoList;
+        }
+
+        .monthlySelect {
+          width: 486px;
+          padding: 5px 16px;
+          margin: 0 1px;
+
+          select {
+            @include inputBorder;
+            width: 128px;
+            padding: 11px 12px;
+          }
+        }
+      }
+
+      .pwInfo {
+        @include cardInfoLine;
+
+        .pwKR {
+          @include cardInfoList;
+        }
+
+        .pwInput {
+          font-size: 13px;
+          width: 486px;
+          padding: 5px 16px;
+          margin: 0 1px;
+
+          input {
+            @include inputBorder;
+            height: 40px;
+            width: 60px;
+            margin-right: 5px;
+            padding: 11px 12px;
+          }
+        }
+      }
+
+      .birthInfo {
+        @include cardInfoLine;
+
+        .infoKR {
+          @include cardInfoList;
+          height: 60px;
+        }
+
+        .number {
+          align-items: center;
+          font-size: 13px;
+          width: 486px;
+          padding: 5px 16px;
+          margin: 0 1px;
+
+          input {
+            @include inputBorder;
+            height: 40px;
+            width: 80px;
+            margin-right: 5px;
+            padding: 11px 12px;
+          }
+        }
+      }
+    }
+  }
+}

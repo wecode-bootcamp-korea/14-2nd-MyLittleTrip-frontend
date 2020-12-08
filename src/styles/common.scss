@@ -6,10 +6,60 @@
 
 //colors:
 $primaryColor: #53abf2;
-$lightGrayBorder: #e0e2e4;
+$lightGreyBorder: #e0e2e4;
 $blackFontColor: #353b40;
-$grayFontColor: #b4bcc3;
+$greyFontColor: #b4bcc3;
 $navyFontColor: #216aad;
 $clickedHoverColor: #2d97ed;
 $unclickedHoverColor: #73b5f3;
-$fontGreyColor: #666D75;
+
+//Booking Component//
+@mixin container {
+  margin-top: 24px;
+  height: 68px;
+}
+
+@mixin title {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  line-height: 16px;
+  margin-bottom: 8px;
+}
+
+@mixin inputBorder {
+  border: 1px solid #dee2e6;
+  border-radius: 2px;
+}
+
+@mixin cardInfoLine {
+  display: flex;
+  height: 53px;
+  width: 678px;
+}
+
+@mixin cardInfoList {
+  height: 48px;
+  width: 144px;
+  padding: 16px 16px 16px 0;
+  line-height: 19px;
+  border-bottom: 1px solid $lightGreyBorder;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  line-height: 19.6px;
+  background-color: white;
+}
+
+@mixin finalTicketList {
+  height: 18px;
+  width: 99px;
+  padding: 12px 0 12px 0;
+  margin-top: 5px;
+}
+
+@mixin ReservNoteSummary {
+//   width: 678px;
+// height: 381px;
+// padding-bottom: 24px;
+}
