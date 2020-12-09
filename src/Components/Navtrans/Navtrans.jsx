@@ -71,9 +71,15 @@ const Navtrans = ({ themeColor }) => {
         {isLogin ? (
           <>
             <LoginProfileBar themeColor={themeColor}>
-              {LOGIN_PROFILE_MENUS.map((menu) => (
-                <p key={menu.id}>{menu.name}</p>
-              ))}
+              {LOGIN_PROFILE_MENUS.map((menu) => {
+                if (menu.name === "예약내역")
+                  return (
+                    <Link key={menu.id} to="/reservation">
+                      <p>{menu.name}</p>
+                    </Link>
+                  );
+                return <p key={menu.id}>{menu.name}</p>;
+              })}
               <div className="profileImageContainer" ref={profileImageRef}>
                 <FaUserCircle
                   className="userIcon"

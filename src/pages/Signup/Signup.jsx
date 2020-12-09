@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Navtrans from "../../Components/Navtrans/Navtrans";
+import Footer from "../../Components/Footer/Footer";
 import {
   GreetingBox,
   GreetingIcon,
@@ -66,6 +67,7 @@ const Signup = (props) => {
           </OtherOptions>
         </GreetingContext>
       </GreetingBox>
+      <Footer />
     </>
   );
 };

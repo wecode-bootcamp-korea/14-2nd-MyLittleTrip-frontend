@@ -10,6 +10,7 @@ import { theme } from "./styles/theme";
 import GlobalStyle from "./styles/Globalstyles";
 import DestinationDesk from "./Components/TicketSelector/DestinationDesk";
 import TicketSelector from "./Components/TicketSelector/TicketSelector";
+import Reservation from "./pages/Reservation/Reservation";
 
 
 class Routes extends Component {
@@ -24,7 +25,7 @@ class Routes extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/loading" component={LoadingScreen} />
             <Route exact path="/list" component={List} />
-            <Route exact path="/ticketselector" component={TicketSelector} />
+            <Route exact path="/reservation" component={Reservation} />
           </Switch>
         </ThemeProvider>
       </Router>
