@@ -2,10 +2,9 @@ import styled from "styled-components";
 import {theme} from "../../styles/theme";
 
 export const CarouselTitle = styled.h2`
-  width: 1060px;
+  width: ${({width}) => width || "1060px"};
   height: ${({size}) => size || "18px"};
-  margin-top: 35px;
-  margin-bottom: 15px;
+  margin: 35px ${({marginHorizon}) => marginHorizon || "0"} 15px ${({marginHorizon}) => marginHorizon || "0"};
   font-size: ${({size}) => size || "18px"};
   font-weight: ${({bold}) => bold || "normal"};
   color: ${({theme}) => theme.lightBlack};
