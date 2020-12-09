@@ -26,8 +26,6 @@ const Navtrans = ({ themeColor }) => {
   }, [profileVisible]);
 
   const fetchUserInfo = async () => {
-    if (userInfo) return;
-
     try {
       const response = await axios({
         method: "get",
@@ -36,14 +34,14 @@ const Navtrans = ({ themeColor }) => {
           Authorization: localStorage.getItem("token"),
         },
       });
-      dispatch(loggedIn());
       dispatch(setUserInformation(response.data.user_info));
+      dispatch(loggedIn());
     } catch (error) {
       console.log(error);
     }
   };
 
-  if (localStorage.getItem("token")) {
+  if (localStorage.getItem("token") && !userInfo) {
     fetchUserInfo();
   }
 

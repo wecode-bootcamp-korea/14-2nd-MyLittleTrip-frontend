@@ -1,0 +1,61 @@
+@import "../../../styles/common.scss";
+
+.FinalCheck {
+  height: 351px;
+  width: 728px;
+  // border: solid greenyellow;
+
+  .reservAgreement {
+    height: 41px;
+    width: 728px;
+
+    .agreementTittle {
+      display: flex;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: -0.2px;
+      line-height: 14px;
+      text-align: left;
+      color: #2b96ed;
+      align-items: center;
+      height: 41px;
+      width: 728px;
+      // border: solid 1px blue;
+    }
+  }
+  .agreementContentContainer {
+    height: 257px;
+    width: 728px;
+    padding: 28px 24px 28px 24px;
+    border: #d3cecd 1px solid;
+
+    .agreementContent {
+      font-size: 13px;
+      letter-spacing: -0.2px;
+      text-align: left;
+      color: #343a40;
+
+      li {
+        font-size: 14px;
+        letter-spacing: -0.2px;
+        line-height: 24.5px;
+        text-align: left;
+        color: #343a40;
+      }
+    }
+  }
+  .checkAgreementBox {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 728px;
+    padding: 16px 28px 16px 20px;
+    border: #d3cecd 1px solid;
+    border-top: none;
+    margin: 0;
+
+    .lastWarning {
+      margin-left: 5px;
+    }
+  }
+}

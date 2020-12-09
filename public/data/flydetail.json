@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "depature": "김포",
+      "flydate": "12월08일",
+      "arrival": "제주",
+      "airline": "에어조던",
+      "flytype": "왕복",
+      "class": "특가석",
+      "passenger": "1명"
+    },
+    {
+      "": "제주",
+      "flydate": "12월12일",
+      "arrival": "김포",
+      "airline": "에어조던",
+      "flytype": "왕복",
+      "class": "특가석",
+      "passenger": "1명"
+    }
+  ]
+}

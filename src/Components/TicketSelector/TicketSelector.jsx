@@ -111,7 +111,7 @@ class TicketSelctor extends Component {
   handleSearchClick = () => {
     const { location } = this.props;
     const { depPlace, arrPlace, startDate, endDate, headCount, seatType } = this.state;
-    if (!arrPlace || !endDate) {
+    if (!arrPlace || !endDate || !depPlace) {
       alert("올바른 값을 입력해주세요.");
       return;
     }
@@ -175,80 +175,82 @@ class TicketSelctor extends Component {
 
     const { top, depLeft, arrLeft, location } = this.props;
     return (
-      <TicketSelectorContainer>
-        {destinationModal && (
-          <DestinationDesk
-            top={top || "50px"}
-            left={depLeft || "0"}
-            closeDestination={this.closeDestination}
-            selectDepPlace={this.selectDepPlace}
-          />
-        )}
-
-        {arriveModal && (
-          <DestinationDesk
-            top={top || "50px"}
-            left={arrLeft || "210px"}
-            closeDestination={this.closeDesk}
-            selectArrPlace={this.selectArrPlace}
-          />
-        )}
-        <TicketSelector>
-          <div className="cityInputWrap">
-            <ChooseCity placeholder="출발지를 선택하세요" onClick={this.openDestination} value={depPlace} />
-            <span>
-              <CgArrowsExchangeAlt className="switchButton" onClick={this.handleChangeInput} />
-            </span>
-            <ChooseCity onClick={this.openDesk} value={arrPlace} />
-          </div>
-          <div className="dateInputWrap">
-            <AiOutlineCalendar className="calendar" />
-            <ChooseDate
-              placeholder="가는날 선택"
-              startDate={startDate && this.dateFormatter(startDate)}
-              endDate={endDate && this.dateFormatter(endDate)}
-              onClick={this.openCalendar}
-            />
-            <span className="dashSpan">
-              <VscDash className="dash" />
-            </span>
-            <ChooseDate endDate={endDate && this.dateFormatter(endDate)} onClick={this.openCalendar} />
-            {calendarModal && (
-              <Calendar
-                startDate={startDate}
-                endDate={endDate}
-                handleSubmitClick={this.handleSubmitClick}
-                closeCalendar={this.closeCalendar}
-              />
-            )}
-          </div>
-          <div className="userInfo" onClick={this.openSeatOption}>
-            <div>
-              <FaUser className="userIcon" />
-            </div>
-            <div className="infoText">
-              <span>
-                승객 {headCount}명, {seatType}
-              </span>
-              <BiDownArrow className="downArrow" />
-            </div>
-          </div>
-          {seatModal && (
-            <SeatOption
-              seatType={seatType}
-              headCount={headCount}
-              handleRadioChange={this.handleRadioChange}
-              handleHeadCount={this.handleHeadCount}
-              closeSeatOption={this.closeSeatOption}
+      <>
+        <TicketSelectorContainer>
+          {destinationModal && (
+            <DestinationDesk
+              top={top || "50px"}
+              left={depLeft || "0"}
+              closeDestination={this.closeDestination}
+              selectDepPlace={this.selectDepPlace}
             />
           )}
-          <div>
-            <SearchButton mode={location.pathname === "/" ? "main" : "list"} onClick={this.handleSearchClick}>
-              검색
-            </SearchButton>
-          </div>
-        </TicketSelector>
-      </TicketSelectorContainer>
+
+          {arriveModal && (
+            <DestinationDesk
+              top={top || "50px"}
+              left={arrLeft || "210px"}
+              closeDestination={this.closeDesk}
+              selectArrPlace={this.selectArrPlace}
+            />
+          )}
+          <TicketSelector>
+            <div className="cityInputWrap">
+              <ChooseCity placeholder="출발지를 선택하세요" onClick={this.openDestination} value={depPlace} />
+              <span>
+                <CgArrowsExchangeAlt className="switchButton" onClick={this.handleChangeInput} />
+              </span>
+              <ChooseCity onClick={this.openDesk} value={arrPlace} />
+            </div>
+            <div className="dateInputWrap">
+              <AiOutlineCalendar className="calendar" />
+              <ChooseDate
+                placeholder="가는날 선택"
+                startDate={startDate && this.dateFormatter(startDate)}
+                endDate={endDate && this.dateFormatter(endDate)}
+                onClick={this.openCalendar}
+              />
+              <span className="dashSpan">
+                <VscDash className="dash" />
+              </span>
+              <ChooseDate endDate={endDate && this.dateFormatter(endDate)} onClick={this.openCalendar} />
+              {calendarModal && (
+                <Calendar
+                  startDate={startDate}
+                  endDate={endDate}
+                  handleSubmitClick={this.handleSubmitClick}
+                  closeCalendar={this.closeCalendar}
+                />
+              )}
+            </div>
+            <div className="userInfo" onClick={this.openSeatOption}>
+              <div>
+                <FaUser className="userIcon" />
+              </div>
+              <div className="infoText">
+                <span>
+                  승객 {headCount}명, {seatType}
+                </span>
+                <BiDownArrow className="downArrow" />
+              </div>
+            </div>
+            {seatModal && (
+              <SeatOption
+                seatType={seatType}
+                headCount={headCount}
+                handleRadioChange={this.handleRadioChange}
+                handleHeadCount={this.handleHeadCount}
+                closeSeatOption={this.closeSeatOption}
+              />
+            )}
+            <div>
+              <SearchButton mode={location.pathname === "/" ? "main" : "list"} onClick={this.handleSearchClick}>
+                검색
+              </SearchButton>
+            </div>
+          </TicketSelector>
+        </TicketSelectorContainer>
+      </>
     );
   }
 }
