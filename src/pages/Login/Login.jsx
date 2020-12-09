@@ -1,4 +1,6 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import Navtrans from "../../Components/Navtrans/Navtrans";
 import Footer from "../../Components/Footer/Footer";
@@ -9,11 +11,14 @@ import {
   KakaoButton,
   OtherOptions,
 } from "../../Components/StyledComponents/Greeting";
-import { KAKAO_LOGIN_API } from "../../config";
+import { loggedIn, setUserInformation } from "../../store/actions";
+import { KAKAO_LOGIN_API, USER_INFO } from "../../config";
 
 const { Kakao } = window;
 
 const Login = (props) => {
+  const dispatch = useDispatch();
+
   const kakaoLogin = () => {
     Kakao.init(process.env.REACT_APP_KAKAO_LOGIN_API_KEY);
     Kakao.Auth.login({
@@ -27,7 +32,6 @@ const Login = (props) => {
           .then((res) => {
             if (res.access_token) {
               localStorage.setItem("token", res.access_token);
-              alert("환영합니다");
               props.history.push("/");
               return;
             }

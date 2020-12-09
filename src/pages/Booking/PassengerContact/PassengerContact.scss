@@ -1,0 +1,141 @@
+@import "../../../styles/common.scss";
+
+.PassengerContact {
+  height: 368px;
+  width: 777px;
+  margin-top: 200px;
+
+  h {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+    line-height: 24px;
+    margin: 24px 0 4px 0;
+    padding: 0 0 12px 0;
+  }
+
+  .Container {
+    @include inputBorder;
+    height: 290px;
+    width: 728px;
+    margin-top: 15px;
+    padding: 24px;
+
+    .NameContainer {
+      height: 68px;
+      width: 678px;
+
+      .Name {
+        height: 16px;
+        width: 678px;
+        font-size: 14px;
+        letter-spacing: -0.2px;
+        margin-bottom: 8px;
+      }
+
+      input {
+        @include inputBorder;
+        font-size: 14px;
+        letter-spacing: -0.2px;
+        line-height: 14px;
+        height: 40px;
+        width: 176px;
+        padding: 10px 12px;
+        cursor: text;
+      }
+    }
+    .emailContainer {
+      height: 64px;
+      width: 678px;
+      margin-top: 24px;
+
+      .email {
+        height: 16px;
+        width: 678px;
+        font-size: 14px;
+        letter-spacing: -0.2px;
+        margin-bottom: 8px;
+      }
+
+      .emailInput {
+        @include inputBorder;
+        font-size: 14px;
+        letter-spacing: -0.2px;
+        line-height: 14px;
+        height: 40px;
+        width: 176px;
+        margin-right: 3px;
+        padding: 10px 12px 10px 12px;
+        cursor: text;
+      }
+
+      .addressInput {
+        @include inputBorder;
+        font-size: 14px;
+        letter-spacing: -0.2px;
+        line-height: 14px;
+        height: 40px;
+        width: 176px;
+        margin-left: 3px;
+        padding: 10px 12px 10px 12px;
+        cursor: text;
+      }
+
+      select {
+        @include inputBorder;
+        line-height: 14px;
+        height: 41px;
+        width: 140px;
+        margin-left: 3px;
+        padding: 10px 12px;
+      }
+    }
+
+    .PhoneContainer {
+      height: 64px;
+      width: 678px;
+      margin-top: 24px;
+
+      .Phone {
+        height: 16px;
+        width: 678px;
+        font-size: 14px;
+        letter-spacing: -0.2px;
+        margin-bottom: 8px;
+      }
+
+      select {
+        @include inputBorder;
+        line-height: 14px;
+        height: 43px;
+        width: 124px;
+        margin-left: 3px;
+        padding: 10px 12px 10px 12px;
+      }
+
+      .phoneMiddleInput {
+        @include inputBorder;
+        font-size: 14px;
+        letter-spacing: -0.2px;
+        line-height: 14px;
+        height: 44px;
+        width: 120px;
+        margin-left: 3px;
+        padding: 10px 12px 10px 12px;
+        cursor: text;
+      }
+
+      .phoneLastInput {
+        @include inputBorder;
+        font-size: 14px;
+        letter-spacing: -0.2px;
+        line-height: 14px;
+        height: 44px;
+        width: 120px;
+        margin-left: 3px;
+        padding: 10px 12px 10px 12px;
+        cursor: text;
+      }
+    }
+  }
+}
