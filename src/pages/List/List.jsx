@@ -57,14 +57,14 @@ class List extends Component {
 
   componentDidMount() {
     this.fetchTicketData(this.getDepQueryString());
-    setTimeout(() => this.setState({ loading: true }), 1000);
+    setTimeout(() => this.setState({ loading: true }), 5000);
   }
 
   componentDidUpdate(prevProps, prevState) {
     const { selected } = this.state;
     if (prevState.selected.length !== selected.length) {
       if (selected.length === 1) {
-        this.fetchTicketData(this.getArrQueryString());
+        this.fetchTicketData(this.getArrQueryString() + this.makeQuerystring());
       } else if (selected.length === 2) {
         this.setState({ ticket: [] });
       }

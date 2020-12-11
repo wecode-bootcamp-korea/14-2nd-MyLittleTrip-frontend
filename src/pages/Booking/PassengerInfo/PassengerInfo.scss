@@ -1,0 +1,216 @@
+@import "../../../styles/common.scss";
+.PassengerInfo {
+  height: 800px;
+  width: 728px;
+  margin-top: 40px;
+  .InfoTitle {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+    line-height: 24px;
+    margin: 24 0 4 0;
+    padding: 0 0 12 0;
+  }
+  .InfoContainer {
+    @include inputBorder;
+    height: 690px;
+    width: 728px;
+    padding: 24px;
+    margin-top: 15px;
+    .Quantity {
+      height: 18px;
+      width: 678px;
+      margin: 0 0 24px 0;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+      line-height: 18px;
+    }
+    .NameContainer {
+      height: 108px;
+      width: 678px;
+      .name {
+        display: flex;
+        .lastNameContainer {
+          height: 64px;
+          width: 140px;
+          .last {
+            height: 16px;
+            width: 140px;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: -0.2px;
+          }
+          input {
+            @include inputBorder;
+            height: 40px;
+            width: 114px;
+            padding: 10px 12px 10px 12px;
+            cursor: text;
+          }
+        }
+        .firstNameContainer {
+          height: 64px;
+          width: 140px;
+          margin-left: 8px;
+          .first {
+            height: 16px;
+            width: 140px;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: -0.2px;
+          }
+          input {
+            @include inputBorder;
+            height: 40px;
+            width: 214px;
+            padding: 10px 12px 10px 12px;
+            cursor: text;
+          }
+        }
+      }
+      p {
+        font-size: 12px;
+        color: #848c94;
+        letter-spacing: -0.2px;
+        line-height: 14px;
+        padding-top: 8px;
+        margin: 0;
+      }
+    }
+    .passengerGenderContainer {
+      @include container;
+      .Gender {
+        @include title;
+      }
+      .pickGender {
+        height: 40px;
+        width: 678px;
+        .maleCover {
+          height: 40px;
+          width: 160px;
+          .maleButton {
+            @include inputBorder;
+            height: 40px;
+            width: 160px;
+            background-color: white;
+            cursor: pointer;
+            &.selected {
+              background-color: $primaryColor;
+              color: white;
+            }
+          }
+        }
+        .femaleCover {
+          height: 40px;
+          width: 160px;
+          .femaleButton {
+            @include inputBorder;
+            height: 40px;
+            width: 160px;
+            background-color: white;
+            cursor: pointer;
+            &.selected {
+              background-color: $primaryColor;
+              color: white;
+            }
+          }
+        }
+        .selected {
+          color: $primaryColor;
+        }
+      }
+    }
+    .nationalityContainer {
+      @include container;
+      .nationality {
+        @include title;
+      }
+      .selectContainer {
+        height: 40px;
+        select {
+          @include inputBorder;
+          height: 38px;
+          width: 106px;
+          margin-left: 3px;
+          background-color: white;
+          cursor: pointer;
+        }
+      }
+    }
+    .birthContainer {
+      @include container;
+      .birth {
+        @include title;
+      }
+      input {
+        @include inputBorder;
+        height: 40px;
+        width: 114px;
+        padding: 10px 12px 10px 12px;
+      }
+      .monthSelect {
+        @include inputBorder;
+        height: 38px;
+        width: 106px;
+        margin-left: 3px;
+        padding-left: 12px;
+      }
+      .daySelect {
+        @include inputBorder;
+        height: 38px;
+        width: 106px;
+        margin-left: 3px;
+        padding-left: 12px;
+      }
+    }
+    .depaturePaymentContainer {
+      @include container;
+      padding-top: 20px;
+      .payment {
+        .paymentTitle {
+          @include title;
+        }
+        select {
+          @include inputBorder;
+          height: 38px;
+          width: 313px;
+          padding-left: 12px;
+        }
+        p {
+          font-size: 12px;
+          color: #848c94;
+          letter-spacing: -0.2px;
+          line-height: 14px;
+          padding-top: 8px;
+          margin: 0;
+        }
+      }
+    }
+    .returnPaymentContainer {
+      @include container;
+      padding-top: 20px;
+      .payment {
+        .paymentTitle {
+          @include title;
+        }
+        select {
+          @include inputBorder;
+          height: 38px;
+          width: 313px;
+          padding-left: 12px;
+        }
+        p {
+          font-size: 12px;
+          color: #848c94;
+          letter-spacing: -0.2px;
+          line-height: 14px;
+          padding-top: 8px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

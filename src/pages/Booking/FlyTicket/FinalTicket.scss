@@ -1,0 +1,81 @@
+@import "../../../styles/common.scss";
+
+.FinalTicket {
+  width: 728px;
+  margin: 5px 0;
+  // border: 1px solid $lightGreyBorder;
+
+  .topTable {
+    display: flex;
+    height: 48px;
+    background-color: lightgray;
+
+    .airLine {
+      height: 18px;
+      width: 249px;
+      margin-top: 5px;
+      padding: 12px 0 12px 0;
+      font-size: 13px;
+    }
+
+    .journey {
+      height: 18px;
+      width: 182px;
+      margin-top: 5px;
+      padding: 12px 0 12px 0;
+      font-size: 13px;
+    }
+
+    .depature {
+      @include finalTicketList;
+      font-size: 13px;
+    }
+
+    .arrival {
+      @include finalTicketList;
+      font-size: 13px;
+    }
+
+    .class {
+      @include finalTicketList;
+      font-size: 13px;
+    }
+  }
+  .infoCover {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    width: 728px;
+    border: 1px solid $lightGrayBorder;
+
+    .planDate {
+      width: 83px;
+      font-size: 13px;
+    }
+
+    .planeNumber {
+      width: 166px;
+      font-size: 13px;
+    }
+
+    .destiantion {
+      width: 182px;
+      font-size: 13px;
+    }
+
+    .depatureDate {
+      width: 99px;
+      font-size: 13px;
+    }
+
+    .arrivalDate {
+      width: 99px;
+      font-size: 13px;
+    }
+
+    .typeOfSeat {
+      width: 99px;
+      font-size: 13px;
+    }
+  }
+}

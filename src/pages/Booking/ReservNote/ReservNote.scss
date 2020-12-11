@@ -1,0 +1,61 @@
+@import "../../../styles/common.scss";
+.ReservNote {
+  @include inputBorder;
+  width: 728px;
+  height: 520px;
+  .title {
+    height: 24px;
+    margin-bottom: 4px;
+    padding-bottom: 12px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .list {
+    display: flex;
+    height: 47px;
+    .General {
+      margin-right: 24px;
+      padding: 15px 0 15px 0;
+      cursor: pointer;
+      .rule {
+        width: 60px;
+        height: 18px;
+      }
+    }
+    .Refund {
+      margin-right: 24px;
+      padding: 15px 0 15px 0;
+      cursor: pointer;
+      .rule {
+        width: 94px;
+        height: 18px;
+      }
+    }
+    .Payment {
+      margin-right: 24px;
+      padding: 15px 0 15px 0;
+      cursor: pointer;
+      .rule {
+        width: 60px;
+        height: 18px;
+      }
+    }
+    .Luggage {
+      margin-right: 24px;
+      padding: 15px 0 15px 0;
+      cursor: pointer;
+      .rule {
+        width: 70px;
+        height: 18px;
+      }
+    }
+  }
+  .selected {
+    color: $primaryColor;
+  }
+  .summary {
+    width: 678px;
+    height: 381px;
+    padding: 24px;
+  }
+}

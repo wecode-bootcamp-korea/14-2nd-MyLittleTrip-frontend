@@ -19,7 +19,9 @@ const Reservation = (props) => {
         </CarouselTitle>
         {response &&
           response.data.map((flight) =>
-            flight.product.map((ticket) => <ReservationCard key={ticket.id} ticket={ticket} />)
+            flight.product.map((ticket) => (
+              <ReservationCard key={ticket.id} ticket={ticket} />
+            ))
           )}
       </ReservContainer>
       <Footer />
